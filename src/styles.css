@@ -1,0 +1,16 @@
+html {
+  background: url("../src/assets/images/bienvenido.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media (max-width: 750px) {
+  html {
+    background: url("../src/assets/images/movile-welcome.jpg") no-repeat center center fixed;
+    background-size: 95%;
+  }
+}
+
+
