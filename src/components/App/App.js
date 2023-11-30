@@ -1,22 +1,24 @@
 import React from 'react';
-import InLineMenu from '../InLineMenu';
-import HamburgerMenu from '../HamburgerMenu';
+import NavBar from '../NavBar';
 
 function App() {
   const [menuSection, setMenuSection] = React.useState('home');
   const menuOpt = ['Servicios', 'Equipo', 'Metodología', 'Contacto'];
+  // const [language, setLanguage] = React.useState('English');
+
+  // function toggleLanguage() {
+  //  return language === 'English' ? setLanguage('Español') : setLanguage('English');
+  // }
   return (
-    <div>
-      <nav>
-        <div className="logo" />
-        <InLineMenu menuSection={menuSection} setMenuSection={setMenuSection} menuOpt={menuOpt} />
-        <HamburgerMenu
-          menuSection={menuSection}
-          setMenuSection={setMenuSection}
-          menuOpt={menuOpt}
-        />
-      </nav>
-    </div>
+    <>
+      <NavBar
+        // toggleLanguage={toggleLanguage}
+        menuOpt={menuOpt}
+        menuSection={menuSection}
+        setMenuSection={setMenuSection}
+        // language={language}
+      />
+    </>
   );
 }
 

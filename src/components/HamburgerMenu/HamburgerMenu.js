@@ -10,11 +10,11 @@ function HamburgerMenu({ menuSection, setMenuSection, menuOpt }) {
 
   return (
     <div className="toggle-hamburger">
-      {menuSection}
-      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+      {/* <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         <div className={`burger ${burger1}`} />
         <div className={`burger ${burger2}`} />
-      </div>
+      </div> */}
+      <button className="burger" onClick={() => setIsOpen(!isOpen)} />
       {isOpen
         && (
           <Menu setMenuSection={setMenuSection} menuOpt={menuOpt} isOpen={isOpen} />
