@@ -5,16 +5,12 @@ import Menu from '../Menu';
 
 function HamburgerMenu({ menuSection, setMenuSection, menuOpt }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const burger1 = isOpen ? 'openHamburger1' : 'closeHamburger1';
-  const burger2 = isOpen ? 'openHamburger2' : 'closeHamburger2';
 
   return (
     <div className="toggle-hamburger">
-      {/* <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <div className={`burger ${burger1}`} />
-        <div className={`burger ${burger2}`} />
-      </div> */}
-      <button className="burger" onClick={() => setIsOpen(!isOpen)} />
+      <label id="burger" className="hamburger-menu">
+        <input id="burger" type="checkbox" onClick={() => setIsOpen(!isOpen)} />
+      </label>
       {isOpen
         && (
           <Menu setMenuSection={setMenuSection} menuOpt={menuOpt} isOpen={isOpen} />
