@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar';
+import Home from '../Home/Home';
 
 function App() {
   const [menuSection, setMenuSection] = React.useState('home');
@@ -18,6 +19,7 @@ function App() {
         setMenuSection={setMenuSection}
         // language={language}
       />
+      <Home />
     </>
   );
 }
