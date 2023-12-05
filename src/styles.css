@@ -62,7 +62,7 @@ body {
   text-decoration: none;
   font-size: 2rem;
   color: #a09d9d;
-  z-index: 2;
+  z-index: 5;
 }
 
 .home-wrapper {
@@ -91,52 +91,81 @@ body {
 .office {
   background: url("../src/assets/images/office.png") no-repeat center center;
   background-size: cover;
-  min-height: 60vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 
 .square-card {
   background-color: var(--square2-color);
   border-radius: 10px;
-  width: 70%;
+  max-width: 70%;
+  height: 55%;
   margin: 8%;
+  position: absolute;
 }
 
-.arrow-button {
+.arrow-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.arrow-buttons > button {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  margin: 10px;
-  margin-left: 90%;
   border: none;
   padding: 0;
   cursor: pointer;
 }
 
-.right-arrow {
+.right-arrow, .left-arrow {
   fill: var(--heading-color);
   background-color: var(--square1-color);
   border-radius: 50%;
   padding: 5px;
 }
 
-.right-arrow:hover {
+.right-arrow:hover, .left-arrow:hover {
   background-color: var(--heading-color);
   fill: var(--square1-color);
 }
 
 .square-wrapper {
   display: flex;
+  justify-content: center;
   gap: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.title-card {
+  width: 30%;
+}
+
+.bullet-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0;
 }
 
 .card-text-title {
   color: var(--heading-color);
   font-size: 3rem;
   font-weight: 200;
+  margin: 0;
+}
+
+.card-text-subtitle {
+  color: var(--heading-color);
+  font-size: 1rem;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -147,10 +176,21 @@ body {
   gap: 3rem;
 }
 
-.card-text p {
+.regular-card-text {
   margin: 0;
   color: var(--general-text-color);
   font-size: 1rem;
+}
+
+.hidden-arrow{
+  display: none;
+}
+
+.industries-list {
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @media (max-width: 750px) {
@@ -176,7 +216,7 @@ body {
     transform-origin: left center;
     transition: width var(--animation-timing), rotate var(--animation-timing),
       translate var(--animation-timing);
-    z-index: 2;
+    z-index: 5;
   }
   
   .hamburger-menu {
@@ -186,7 +226,7 @@ body {
     flex-direction: column;
     gap: var(--hamburger-gap);
     border-radius: 10px;
-    z-index: 2;
+    z-index: 5;
   }
 
   .hamburger-menu input {
@@ -196,7 +236,7 @@ body {
     margin: 0;
     outline: none;
     pointer-events: none;
-    z-index: 2;
+    z-index: 5;
   }
 
   .hamburger-menu:has(input:checked)::before {
@@ -222,6 +262,7 @@ body {
     animation-duration: 0.5s;
     animation-name: animate-fade;
     animation-fill-mode: backwards;
+    z-index: 4;
   }
 
   @keyframes animate-fade {
@@ -238,6 +279,11 @@ body {
     position: absolute;
   }
 
+  .square-card {
+    position: relative;
+    max-width: 80%;
+  }
+
   .square-wrapper {
     flex-direction: column;
   }
@@ -245,5 +291,9 @@ body {
   .arrow-button {
     margin-top: 10%;
     margin-left: 80%;
+  }
+
+  .title-card {
+    width: auto;
   }
 }

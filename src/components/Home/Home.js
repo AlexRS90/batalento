@@ -1,8 +1,12 @@
 import React from 'react';
 import { OFFICE_CARDS } from '../../data';
-import SquareCard from '../SquareCard/SquareCard';
+import CardEstamosListos from '../CardEstamosListos/CardEstamosListos';
 
 function Home() {
+  const [card, setCard] = React.useState(0);
+  const maxCards = OFFICE_CARDS.length - 1;
+  const currentCard = OFFICE_CARDS[card];
+
   return (
     <div className="home-wrapper">
       <section className="mountains">
@@ -14,26 +18,21 @@ function Home() {
         </p>
       </section>
       <section className="office">
-        <SquareCard>
-          <button className="arrow-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="right-arrow">
-              <path d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z" />
-            </svg>
-          </button>
-          {OFFICE_CARDS.map((element) => (
-            <div key={element.id} className="square-wrapper">
-              <div><p className="card-text-title">{element.title}</p></div>
-              <div className="card-text">
-                {element.text_info.split('.').map((text) => (
-                  <p key={Math.random()}>
-                    {text}
-                    .
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
-        </SquareCard>
+        <div className="square-card">
+          <div className="arrow-buttons">
+            <button type="button" onClick={() => setCard(card - 1)} disabled={card === 0} className={card === 0 ? 'hidden-arrow' : undefined}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="left-arrow">
+                <path d="m12.718 4.707-1.413-1.415L2.585 12l8.72 8.707 1.413-1.415L6.417 13H20v-2H6.416l6.302-6.293z" />
+              </svg>
+            </button>
+            <button type="button" onClick={() => setCard(card + 1)} disabled={card === maxCards} className={card === 2 ? 'hidden-arrow' : undefined}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="right-arrow">
+                <path d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z" />
+              </svg>
+            </button>
+          </div>
+          <CardEstamosListos currentCard={currentCard} card={card} />
+        </div>
       </section>
     </div>
   );
