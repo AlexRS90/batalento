@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../NavBar';
 import Home from '../Home/Home';
+import Parallax from '../Parallax/Parallax';
 
 function App() {
   const [menuSection, setMenuSection] = React.useState('home');
@@ -20,6 +21,7 @@ function App() {
         // language={language}
       />
       <Home />
+      <Parallax />
     </>
   );
 }
