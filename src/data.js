@@ -1,6 +1,7 @@
 import talento from './assets/images/busqueda-de-talento.png';
 import desarrollo from './assets/images/desarrollo-de-carrera.png';
 import consultoria from './assets/images/consultoria.png';
+import abrilImg from './assets/images/abril.png';
 
 const OFFICE_CARDS = [
   {
@@ -42,4 +43,21 @@ const SERVICES_CARDS = [
   },
 ];
 
-export { OFFICE_CARDS, SERVICES_CARDS };
+const EQUIPO = [
+  {
+    id: 1,
+    title: 'EQUIPO',
+    subject: 'Dependiendo de la necesidad, tamaño y ubicación geográfica del proyecto nos apoyamos con un equipo de consultores en la zona y/o de la industria requerida.',
+    ceo: 'ABRIL BARRIENTOS AGUIÑAGA',
+    position: 'Consultora Principal',
+    resume: {
+      text1: 'Lic. en Psicología Organizacional del Instituto Tecnológico y de Estudios Superiores de Monterrey con más de 20 años de experiencia en Capital Humano, principalmente en Búsqueda de Ejecutivos, trabajando para distintas industrias a nivel internacional.',
+      text2: 'Certificada en herramientas como Hogan Assessment, DDI Targeted Selection, así como en la interpretación y retroalimentación de Assessments Ejecutivos de DDI.',
+      text3: 'Experta en procesos de talento teniendo siempre como objetivo brindarle tanto al cliente como a los candidatos procesos ágiles, transparente y dinámicos, que cumplan con las expectativas de ambos en tiempo y forma.',
+      text4: 'Principales Industrias: Tecnologías de la información, manufactura, agroindustrial y alimentos\nPaíses: México, Estados Unidos, Centro y Sudamérica, UK, Hungría, Alemania',
+    },
+    img: abrilImg,
+  },
+];
+
+export { OFFICE_CARDS, SERVICES_CARDS, EQUIPO };

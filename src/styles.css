@@ -257,6 +257,65 @@ body {
   list-style: disc;
 }
 
+.equipo-containter {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px 0 0 20px;
+  margin: 0 0 5% 5%;
+  background: url("../src/assets/images/equipo-fondo.png");
+  background-size: cover;
+  background-position: 10rem;
+  height: 70vh;
+}
+
+.team-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--square1-color);
+  border-radius: 20px 0 0 20px;
+  padding: 5%;
+}
+
+.team-member {
+  display: flex;
+  padding: 0 5% 0 5%;
+}
+
+.ceo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.ceo-container img {
+  width: 3rem;
+}
+
+.ceo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ceo-resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ceo-resume p {
+  font-size: 1rem;
+}
+
+.pumas {
+  white-space: pre-wrap;
+}
+
 @media (max-width: 750px) {
   /* html {
     background: url("../src/assets/images/movile-welcome.jpg") no-repeat center center fixed;
