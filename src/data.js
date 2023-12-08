@@ -1,4 +1,8 @@
-export const OFFICE_CARDS = [
+import talento from './assets/images/busqueda-de-talento.png';
+import desarrollo from './assets/images/desarrollo-de-carrera.png';
+import consultoria from './assets/images/consultoria.png';
+
+const OFFICE_CARDS = [
   {
     id: 1,
     title: 'Estamos Listos',
@@ -16,3 +20,26 @@ export const OFFICE_CARDS = [
     text_info: 'Tecnologías de Información¿Infraestructura y telecomunicaciones¿Manufactura¿Productos de Consumo¿Alimentos y bebidas¿Turismo¿Automotriz¿Energía y recursos naturales¿Servicios profesionales',
   },
 ];
+
+const SERVICES_CARDS = [
+  {
+    id: 1,
+    img: talento,
+    title: 'BÚSQUEDA DE TALENTO',
+    info: 'Consultores SAP?Perfiles TI?Ejecutivos y Mandos Medios (cualquier industria)?Puestos administrativos (cualquier industria)',
+  },
+  {
+    id: 2,
+    img: desarrollo,
+    title: 'DESARROLLO DE CARRERA',
+    info: 'Revisión y corrección de Currículum Vitae?Creación de perfil Linkedin',
+  },
+  {
+    id: 3,
+    img: consultoria,
+    title: 'CONSULTORÍA',
+    info: 'Interpretación y Feedback de Hogan Assessments?Revisión del proceso de Atracción de Talento',
+  },
+];
+
+export { OFFICE_CARDS, SERVICES_CARDS };

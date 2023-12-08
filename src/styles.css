@@ -193,6 +193,70 @@ body {
   gap: 10px;
 }
 
+.services-container {
+  display: flex;
+  min-width: 100vh;
+  min-height: 80vh;
+  justify-content: space-between;
+  margin: 0 0 5% 5%;
+  position: relative;
+}
+
+.services {
+  margin-top: 7%;
+  flex-grow: 1;
+}
+
+.services-cards {
+  background: url("../src/assets/images/servicios.png") no-repeat center center;
+  background-size: 150% auto;
+  flex-grow: 10;
+}
+
+.services-info-container {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  margin: 20% 10% 10% 20%;
+  width: auto;
+}
+
+.services-img-container {
+  background-color: var(--square2-color);
+  padding: 4%;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-img-container img {
+  width: 80%;
+  height: 80%;
+}
+
+.services-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.services-info-wrapper ul {
+  padding: 0;
+  padding-left: 6%;
+}
+
+.lower-alpha {
+  list-style: lower-alpha
+}
+
+.bullet-points {
+  list-style: disc;
+}
+
 @media (max-width: 750px) {
   /* html {
     background: url("../src/assets/images/movile-welcome.jpg") no-repeat center center fixed;
@@ -295,5 +359,28 @@ body {
 
   .title-card {
     width: auto;
+  }
+
+  .services-container {
+    flex-direction: column;
+    min-width: -webkit-fill-available;
+  }
+
+  .services-cards {
+    background-position: bottom;
+  }
+
+  .services-info-container {
+    flex-direction: column;
+    margin: 40% 20% 50% 20%;
+  }
+
+  .services-img-container {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .services-info-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
