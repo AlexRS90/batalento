@@ -125,9 +125,9 @@ body {
 
 .square-card {
   background-color: var(--square2-color);
-  border-radius: 10px;
-  max-width: 70%;
-  height: 55%;
+  border-radius: 25px;
+  width: 50%;
+  height: 50%;
   margin: 8%;
   position: absolute;
 }
@@ -167,6 +167,10 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
+}
+
+.square-wrapper-last {
+  justify-content: start;
 }
 
 .title-card {
@@ -317,6 +321,21 @@ body {
 
 .white-space {
   white-space: pre-wrap;
+}
+
+@media (max-width: 1100px) {
+  .menu-styles a {
+    font-size: 1rem;
+  }
+
+  .square-card {
+    width: 70%;
+    height: 55%;
+  }
+
+  .square-wrapper-last {
+    gap: 6rem;
+  }
 }
 
 @media (max-width: 750px) {

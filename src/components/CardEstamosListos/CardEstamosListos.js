@@ -48,7 +48,7 @@ function CardEstamosListos({ currentCard, card }) {
         </div>
       )}
       {card === 2 && (
-        <div key={currentCard.id} className="square-wrapper">
+        <div key={currentCard.id} className="square-wrapper square-wrapper-last">
           <div className="title-card">
             <p className="titulo-secciones">{currentCard.title}</p>
           </div>

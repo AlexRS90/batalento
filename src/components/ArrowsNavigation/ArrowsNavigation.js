@@ -4,8 +4,7 @@ function ArrowsNavigation({ card, setCard, maxCards }) {
   function carrusel(direction) {
     if (direction === 'left') {
       card === 0 ? setCard(maxCards) : setCard(card - 1);
-    }
-    else {
+    } else {
       card === maxCards ? setCard(0) : setCard(card + 1);
     }
   }
