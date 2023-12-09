@@ -3,6 +3,8 @@ import desarrollo from './assets/images/desarrollo-de-carrera.png';
 import consultoria from './assets/images/consultoria.png';
 import abrilImg from './assets/images/abril.png';
 
+const MENU = ['SERVICIOS', 'EQUIPO', 'METODOLOGÍA', 'CONTACTO'];
+
 const OFFICE_CARDS = [
   {
     id: 1,
@@ -60,4 +62,9 @@ const EQUIPO = [
   },
 ];
 
-export { OFFICE_CARDS, SERVICES_CARDS, EQUIPO };
+export {
+  MENU,
+  OFFICE_CARDS,
+  SERVICES_CARDS,
+  EQUIPO,
+};

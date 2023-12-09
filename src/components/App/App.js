@@ -2,10 +2,10 @@ import React from 'react';
 import NavBar from '../NavBar';
 import Home from '../Home/Home';
 import Parallax from '../Parallax/Parallax';
+import { MENU } from '../../data';
 
 function App() {
   const [menuSection, setMenuSection] = React.useState('home');
-  const menuOpt = ['Servicios', 'Equipo', 'Metodología', 'Contacto'];
   // const [language, setLanguage] = React.useState('English');
 
   // function toggleLanguage() {
@@ -15,7 +15,7 @@ function App() {
     <>
       <NavBar
         // toggleLanguage={toggleLanguage}
-        menuOpt={menuOpt}
+        menuOpt={MENU}
         menuSection={menuSection}
         setMenuSection={setMenuSection}
         // language={language}

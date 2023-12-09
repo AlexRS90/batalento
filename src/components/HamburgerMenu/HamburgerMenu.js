@@ -14,11 +14,16 @@ function HamburgerMenu({ menuSection, setMenuSection, menuOpt }) {
   return (
     <div className="toggle-hamburger">
       <label id="burger" className="hamburger-menu">
-        <input id="burger" type="checkbox" onClick={toggleMenu} />
+        <input id="burger" type="checkbox" checked={isOpen} onClick={toggleMenu} />
       </label>
       {isOpen
         && (
-          <Menu setMenuSection={setMenuSection} menuOpt={menuOpt} isOpen={isOpen} />
+          <Menu
+            setMenuSection={setMenuSection}
+            menuOpt={menuOpt}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
         )}
     </div>
   );

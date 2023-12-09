@@ -7,10 +7,10 @@ function Servicios() {
   const maxCards = SERVICES_CARDS.length - 1;
 
   return (
-    <div className="services-container">
+    <div className="services-container" id="Servicios">
       <div className="services">
-        <p className="card-text-title">Servicios</p>
-        <p className="card-text-subtitle">Explora nuestros servicios</p>
+        <p className="titulo-secciones">Servicios</p>
+        <p className="subtitulo-secciones">Explora nuestros servicios</p>
       </div>
       <div className="services-cards" />
       <div className="services-info-container">
@@ -19,10 +19,10 @@ function Servicios() {
         </div>
         <div className="services-info-wrapper">
           <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} />
-          <p className="card-text-subtitle">{SERVICES_CARDS[card].title}</p>
+          <p className="titulo-texto">{SERVICES_CARDS[card].title}</p>
           <ul className={card === 0 ? 'lower-alpha' : 'bullet-points'}>
             {SERVICES_CARDS[card].info.split('?').map((bullets) => (
-              <li key={Math.random()} className="regular-card-text">{bullets}</li>
+              <li key={Math.random()} className="texto-general">{bullets}</li>
             ))}
           </ul>
         </div>

@@ -20,22 +20,22 @@ function Equipo() {
   return (
     <div className="equipo-containter">
       <div className="team-description">
-        <p className="card-text-title">{title}</p>
-        <p className="card-text-subtitle">{subject}</p>
+        <p className="titulo-secciones">{title}</p>
+        <p className="subtitulo-secciones">{subject}</p>
       </div>
       <div className="team-member">
         <div className="ceo-container">
           <img src={img} alt={`${id + ceo}`} />
           <div className="ceo-title">
-            <p className="card-text-subtitle">{ceo}</p>
-            <p className="regular-card-text">{position}</p>
+            <p className="titulo-texto">{ceo}</p>
+            <p className="texto-general">{position}</p>
           </div>
         </div>
         <div className="ceo-resume">
-          <p className="regular-card-text">{text1}</p>
-          <p className="regular-card-text">{text2}</p>
-          <p className="regular-card-text">{text3}</p>
-          <p className="regular-card-text pumas">{text4}</p>
+          <p className="texto-general">{text1}</p>
+          <p className="texto-general">{text2}</p>
+          <p className="texto-general">{text3}</p>
+          <p className="texto-general white-space">{text4}</p>
         </div>
       </div>
     </div>

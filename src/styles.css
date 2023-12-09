@@ -60,9 +60,39 @@ body {
   position: absolute;
   display: fixed;
   text-decoration: none;
-  font-size: 2rem;
-  color: #a09d9d;
+  background: url("../src/assets/images/logo.png") no-repeat center center;
+  background-size: contain;
+  width: 40%;
+  height: 10%;
   z-index: 5;
+}
+
+.titulo-secciones {
+  color: var(--heading-color);
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.subtitulo-secciones {
+  color: var(--heading-color);
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.titulo-texto {
+  color: var(--heading-color);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.texto-general {
+  color: var(--general-text-color);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .home-wrapper {
@@ -82,10 +112,6 @@ body {
   margin-top: 2rem;
   width: 55%;
   text-align: center;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 200;
-  color: var(--heading-color);
 }
 
 .office {
@@ -155,20 +181,6 @@ body {
   margin: 0;
 }
 
-.card-text-title {
-  color: var(--heading-color);
-  font-size: 3rem;
-  font-weight: 200;
-  margin: 0;
-}
-
-.card-text-subtitle {
-  color: var(--heading-color);
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0;
-}
-
 .card-text {
   display: flex;
   flex-direction: column;
@@ -176,13 +188,7 @@ body {
   gap: 3rem;
 }
 
-.regular-card-text {
-  margin: 0;
-  color: var(--general-text-color);
-  font-size: 1rem;
-}
-
-.hidden-arrow{
+.hidden-arrow {
   display: none;
 }
 
@@ -280,6 +286,7 @@ body {
 .team-member {
   display: flex;
   padding: 0 5% 0 5%;
+  gap: 3rem;
 }
 
 .ceo-container {
@@ -291,7 +298,7 @@ body {
 }
 
 .ceo-container img {
-  width: 3rem;
+  width: 30vh;
 }
 
 .ceo-title {
@@ -308,11 +315,7 @@ body {
   gap: 1rem;
 }
 
-.ceo-resume p {
-  font-size: 1rem;
-}
-
-.pumas {
+.white-space {
   white-space: pre-wrap;
 }
 
@@ -328,6 +331,13 @@ body {
   
   .toggle-hamburger {
     display: block;
+  }
+
+  .logo {
+    background: url("../src/assets/images/logo-mobil.png") no-repeat center center;
+    background-size: contain;
+    width: 50%;
+    height: 5%;
   }
 
   .hamburger-menu::before,

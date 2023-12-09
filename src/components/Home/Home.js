@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className="home-wrapper">
       <section className="mountains">
-        <p>
+        <p className="subtitulo-secciones">
           Somos una firma de consultoría de Talento en
           donde consideramos a las personas como la base
           fundamental para conducir a una organización a

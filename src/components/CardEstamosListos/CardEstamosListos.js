@@ -7,12 +7,12 @@ function CardEstamosListos({ currentCard, card }) {
         <div key={currentCard.id} className="square-wrapper">
           <div className="title-card">
             {currentCard.title.split('?').map((title) => (
-              <p key={Math.random()} className="card-text-title">{title}</p>
+              <p key={Math.random()} className="titulo-secciones">{title}</p>
             ))}
           </div>
           <div className="card-text content-card">
             {currentCard.text_info.split('?').map((text) => (
-              <p key={Math.random()} className="regular-card-text">
+              <p key={Math.random()} className="texto-general">
                 {text}
               </p>
             ))}
@@ -25,7 +25,7 @@ function CardEstamosListos({ currentCard, card }) {
             {currentCard.title.split('?').map((title, id) => (
               <p
                 key={Math.random()}
-                className={id === 0 ? 'card-text-title' : 'regular-card-text'}
+                className={id === 0 ? 'titulo-secciones' : 'texto-general'}
               >
                 {title}
               </p>
@@ -37,7 +37,7 @@ function CardEstamosListos({ currentCard, card }) {
                 {text.split('¿').map((info, id) => (
                   <p
                     key={Math.random()}
-                    className={id === 0 ? 'card-text-subtitle' : 'regular-card-text'}
+                    className={id === 0 ? 'titulo-texto' : 'texto-general'}
                   >
                     {info}
                   </p>
@@ -50,13 +50,13 @@ function CardEstamosListos({ currentCard, card }) {
       {card === 2 && (
         <div key={currentCard.id} className="square-wrapper">
           <div className="title-card">
-            <p className="card-text-title">{currentCard.title}</p>
+            <p className="titulo-secciones">{currentCard.title}</p>
           </div>
           <div className="content-card">
-            <p className="card-text-subtitle">{currentCard.subtitle}</p>
+            <p className="titulo-texto">{currentCard.subtitle}</p>
             <ul className="industries-list">
               {currentCard.text_info.split('¿').map((info) => (
-                <li key={Math.random()} className="regular-card-text">
+                <li key={Math.random()} className="texto-general">
                   {info}
                 </li>
               ))}

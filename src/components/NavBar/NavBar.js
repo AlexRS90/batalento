@@ -10,9 +10,9 @@ function NavBar({
   // language,
 }) {
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="navbar">
       <div>
-        <a href="#" className="logo">Abril Barrientos</a>
+        <a href="#navbar" className="logo" />
       </div>
       <div>
         <InLineMenu menuSection={menuSection} setMenuSection={setMenuSection} menuOpt={menuOpt} />
