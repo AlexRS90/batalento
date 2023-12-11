@@ -1,6 +1,7 @@
 import React from 'react';
 import { SERVICES_CARDS } from '../../data';
 import ArrowsNavigation from '../ArrowsNavigation/ArrowsNavigation';
+import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
 function Servicios() {
   const [card, setCard] = React.useState(0);
@@ -30,7 +31,7 @@ function Servicios() {
             </div>
           </div>
         </div>
-        <input type="button" value="VER MÁS" className="primary-button" />
+        <a type="button" href="https://www.google.com" target="_blank" className="primary-button">VER MÁS</a>
       </div>
     </div>
   );

@@ -76,9 +76,40 @@ const EQUIPO = [
   },
 ];
 
+const METODOLOGIA = [
+  {
+    title: 'METODOLOGÍA',
+    subtitle: 'Búsqueda de talento',
+    cards: [
+      {
+        id: 1,
+        title: 'Entendimiento del Cliente y Perfil del Puesto',
+        info: 'Entendimiento de la misión, visión, valores, cultura y situación actual de la empresa. Conocer las responsabilidades de la posición y definir la experiencia y competencias que necesaria. Así como el paquete de compensación.?Definir pruebas.?Definir proceso de entrevistas.',
+      },
+      {
+        id: 2,
+        title: 'Proceso de Atracción de Talento',
+        info: 'Investigación de Mercado para definir estrategia de búsqueda.?Publicación de vacantes, hunting directo, networking.?Entrevista por competencias, aplicación de pruebas o filtros previamente definidos.',
+      },
+      {
+        id: 3,
+        title: 'Presentación de Candidatos y Entrevistas',
+        info: 'Se presenta una terna de candidatos con su respectivo informe y paquete de compensación.?Coordinación de entrevistas con el cliente.',
+      },
+      {
+        id: 4,
+        title: 'Cierre',
+        info: 'Selección del candidato finalista.?Asesoría para la presentación de propuesta económica.?Seguimiento al proceso de ingreso.',
+      },
+    ],
+    cierre: 'Los tiempos de cada etapa del proceso dependerán del tipo de búsqueda, disponibilidad del cliente y quedarán plasmados en la propuesta de servicios previo a iniciar una búsqueda.',
+  },
+];
+
 export {
   MENU,
   OFFICE_CARDS,
   SERVICES_CARDS,
   EQUIPO,
+  METODOLOGIA,
 };
