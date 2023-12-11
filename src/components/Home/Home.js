@@ -20,7 +20,7 @@ function Home() {
       </section>
       <section className="office">
         <div className="square-card">
-          <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} />
+          <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="home" />
           <CardEstamosListos currentCard={currentCard} card={card} />
         </div>
       </section>

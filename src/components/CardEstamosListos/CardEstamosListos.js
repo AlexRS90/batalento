@@ -25,7 +25,7 @@ function CardEstamosListos({ currentCard, card }) {
             {currentCard.title.split('?').map((title, id) => (
               <p
                 key={Math.random()}
-                className={id === 0 ? 'titulo-secciones' : 'texto-general'}
+                className={id === 0 ? 'titulo-secciones' : 'texto-general texto-general-valores'}
               >
                 {title}
               </p>

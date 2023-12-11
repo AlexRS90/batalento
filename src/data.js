@@ -1,6 +1,8 @@
 import talento from './assets/images/busqueda-de-talento.png';
 import desarrollo from './assets/images/desarrollo-de-carrera.png';
 import consultoria from './assets/images/consultoria.png';
+import sap from './assets/images/SAP.png';
+import coaching from './assets/images/coaching.png';
 import abrilImg from './assets/images/abril.png';
 
 const MENU = ['SERVICIOS', 'EQUIPO', 'METODOLOGÍA', 'CONTACTO'];
@@ -42,6 +44,18 @@ const SERVICES_CARDS = [
     img: consultoria,
     title: 'CONSULTORÍA',
     info: 'Interpretación y Feedback de Hogan Assessments?Revisión del proceso de Atracción de Talento',
+  },
+  {
+    id: 4,
+    img: sap,
+    title: 'SAP Enable Now',
+    info: 'Desarrollo de estrategia de capacitación?Creación de material de aprendizaje en formato multimedia?Capacitación en el uso de la herramienta para creación futura de material',
+  },
+  {
+    id: 5,
+    img: coaching,
+    title: 'Coaching/Team Building',
+    info: '',
   },
 ];
 

@@ -95,6 +95,10 @@ body {
   margin: 0;
 }
 
+.texto-general-valores {
+  color: var(--heading-color);
+}
+
 .home-wrapper {
   display: flex;
   flex-direction: column;
@@ -136,7 +140,14 @@ body {
   display: flex;
   justify-content: end;
   gap: 1rem;
+}
+
+.arrows-margin-home {
   margin: 2rem;
+}
+
+.arrows-margin-servicios {
+  margin: 1rem 0;
 }
 
 .arrow-buttons > button {
@@ -205,8 +216,7 @@ body {
 
 .services-container {
   display: flex;
-  min-width: 100vh;
-  min-height: 80vh;
+  height: 90vh;
   justify-content: space-between;
   margin: 0 0 5% 5%;
   position: relative;
@@ -220,36 +230,64 @@ body {
 .services-cards {
   background: url("../src/assets/images/servicios.png") no-repeat center center;
   background-size: 150% auto;
+  background-position: right;
   flex-grow: 10;
+}
+
+.card-position-absolute {
+  position: absolute;
+  top: 35%;
+  left: 7%;
+  /* transform: translate(10%px 10px); */
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: end;
+}
+
+.primary-button {
+  width: fit-content;
+  padding: 2% 4%;
+  background-color: var(--heading-color);
+  color: var(--square2-color);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: VAR(--square2-color);
+  color: VAR(--heading-color);
 }
 
 .services-info-container {
   display: flex;
   background-color: white;
-  border-radius: 20px;
-  position: absolute;
-  margin: 20% 10% 10% 20%;
-  width: auto;
+  border-radius: 25px;
+  justify-content: space-between;
 }
 
 .services-img-container {
   background-color: var(--square2-color);
-  padding: 4%;
   border-radius: 20px 0 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .services-img-container img {
-  width: 80%;
-  height: 80%;
+  /* width: 80%;
+  height: 80%; */
 }
 
 .services-info-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 1rem;
+  width: 20rem;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -323,7 +361,18 @@ body {
   white-space: pre-wrap;
 }
 
-@media (max-width: 1100px) {
+/* Media query
+
+
+pumas
+pumas
+pumas
+pumas
+pumas
+
+*/
+
+@media (max-width: 1150px) {
   .menu-styles a {
     font-size: 1rem;
   }
@@ -335,6 +384,14 @@ body {
 
   .square-wrapper-last {
     gap: 6rem;
+  }
+
+  .card-position-absolute {
+    left: 15%;
+  }
+
+  .services-info-wrapper {
+    width: 14rem;
   }
 }
 

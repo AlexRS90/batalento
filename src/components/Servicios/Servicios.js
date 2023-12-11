@@ -13,19 +13,24 @@ function Servicios() {
         <p className="subtitulo-secciones">Explora nuestros servicios</p>
       </div>
       <div className="services-cards" />
-      <div className="services-info-container">
-        <div className="services-img-container">
-          <img src={SERVICES_CARDS[card].img} alt={SERVICES_CARDS[card].title} />
+      <div className="card-position-absolute">
+        <div className="services-info-container">
+          <div className="services-img-container">
+            <img src={SERVICES_CARDS[card].img} alt={SERVICES_CARDS[card].title} />
+          </div>
+          <div className="services-info-wrapper">
+            <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="servicios" />
+            <div>
+              <p className="titulo-texto">{SERVICES_CARDS[card].title}</p>
+              <ul className={card === 0 ? 'lower-alpha' : 'bullet-points'}>
+                {SERVICES_CARDS[card].info.split('?').map((bullets) => (
+                  <li key={Math.random()} className="texto-general">{bullets}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="services-info-wrapper">
-          <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} />
-          <p className="titulo-texto">{SERVICES_CARDS[card].title}</p>
-          <ul className={card === 0 ? 'lower-alpha' : 'bullet-points'}>
-            {SERVICES_CARDS[card].info.split('?').map((bullets) => (
-              <li key={Math.random()} className="texto-general">{bullets}</li>
-            ))}
-          </ul>
-        </div>
+        <input type="button" value="VER MÁS" className="primary-button" />
       </div>
     </div>
   );
