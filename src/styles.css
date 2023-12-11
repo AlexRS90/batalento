@@ -319,7 +319,9 @@ body {
 .team-description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  gap: 1rem;
+  max-width: 20%;
   background-color: var(--square1-color);
   border-radius: 20px 0 0 20px;
   padding: 5%;
@@ -327,7 +329,8 @@ body {
 
 .team-member {
   display: flex;
-  padding: 0 5% 0 5%;
+  align-items: flex-start;
+  padding: 5% 5% 0 5%;
   gap: 3rem;
 }
 
