@@ -1,7 +1,6 @@
 import React from 'react';
 import { SERVICES_CARDS } from '../../data';
 import ArrowsNavigation from '../ArrowsNavigation/ArrowsNavigation';
-import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
 function Servicios() {
   const [card, setCard] = React.useState(0);
