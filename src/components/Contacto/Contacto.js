@@ -12,6 +12,13 @@ function Contacto() {
         <Formulario empleo="Aspirante" />
         <Formulario empleo="Reclutador" />
       </div>
+      <a
+        href="https://www.linkedin.com/company/abril-barrientos-talent-expert/?viewAsMember=true"
+        target="_blank"
+        className="primary-button"
+      >
+        VER VACANTES
+      </a>
     </div>
   );
 }

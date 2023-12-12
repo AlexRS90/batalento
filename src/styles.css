@@ -262,6 +262,7 @@ body {
   padding: 2% 4%;
   background-color: var(--heading-color);
   color: var(--square2-color);
+  font-family: 'Abel', sans-serif;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -433,6 +434,15 @@ body {
   flex-direction: column;
   margin: 5%;
   align-items: flex-start;
+}
+
+.contacto-container a {
+  align-self: center;
+  padding: 1% 4%;
+}
+
+.contacto-container a:hover {
+  border: 2px solid var(--heading-color);
 }
 
 .forms-wrapper {
