@@ -15,6 +15,7 @@ function Contacto() {
       <a
         href="https://www.linkedin.com/company/abril-barrientos-talent-expert/?viewAsMember=true"
         target="_blank"
+        rel="noreferrer"
         className="primary-button"
       >
         VER VACANTES

@@ -30,7 +30,14 @@ function Servicios() {
             </div>
           </div>
         </div>
-        <a type="button" href="https://www.google.com" target="_blank" className="primary-button">VER MÁS</a>
+        <a
+          href="https://www.google.com"
+          target="_blank"
+          className="primary-button"
+          rel="noreferrer"
+        >
+          VER MÁS
+        </a>
       </div>
     </div>
   );

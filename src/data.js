@@ -4,6 +4,9 @@ import consultoria from './assets/images/consultoria.png';
 import sap from './assets/images/SAP.png';
 import coaching from './assets/images/coaching.png';
 import abrilImg from './assets/images/abril.png';
+import ab from './assets/images/ab.png';
+import fbLogo from './assets/images/facebook.png';
+import inLogo from './assets/images/linkedin.png';
 
 const MENU = ['SERVICIOS', 'EQUIPO', 'METODOLOGÍA', 'CONTACTO'];
 
@@ -106,10 +109,24 @@ const METODOLOGIA = [
   },
 ];
 
+const FOOTER = [
+  {
+    logo: ab,
+    fbLogo: fbLogo,
+    inLogo: inLogo,
+    horario: 'L-V 9 a.m. - 6 p.m.',
+    mail: 'abarrientos@batalento.com',
+    telefono: '415-153-5671',
+    fbURL: 'https://www.facebook.com',
+    inURL: 'https://www.linkedin.com',
+  }
+]
+
 export {
   MENU,
   OFFICE_CARDS,
   SERVICES_CARDS,
   EQUIPO,
   METODOLOGIA,
+  FOOTER,
 };

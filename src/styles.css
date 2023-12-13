@@ -497,6 +497,32 @@ body {
   color: white;
 }
 
+.footer-container {
+  background-color: var(--heading-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 8%;
+}
+
+.footer-data {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.texto-footer {
+  color: var(--square2-color);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /* Media query
 
 
