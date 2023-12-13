@@ -18,7 +18,7 @@ function Equipo() {
     text4,
   } = resume;
   return (
-    <div className="equipo-containter">
+    <div className="equipo-containter" id="equipo">
       <div className="team-description">
         <p className="titulo-secciones">{title}</p>
         <p className="subtitulo-secciones">{subject}</p>

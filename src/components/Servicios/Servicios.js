@@ -7,7 +7,7 @@ function Servicios() {
   const maxCards = SERVICES_CARDS.length - 1;
 
   return (
-    <div className="services-container" id="Servicios">
+    <div className="services-container" id="servicios">
       <div className="services">
         <p className="titulo-secciones">Servicios</p>
         <p className="subtitulo-secciones">Explora nuestros servicios</p>

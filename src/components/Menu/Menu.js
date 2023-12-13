@@ -23,7 +23,7 @@ function Menu({
         {menuOpt.map((element) => (
           <li key={Math.random()} className={menuStyles}>
             <a
-              href={`#${element}`}
+              href={`#${element.toLowerCase()}`}
               onClick={() => closeMenu(element)}
               // onKeyPress={handleEnter(value, element)}
             >

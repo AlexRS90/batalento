@@ -12,13 +12,9 @@
   --square2-color: #f3f3f3;
 }
 
-/* html {
-  background: url("../src/assets/images/bienvenido.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -540,7 +536,7 @@ pumas
 
 */
 
-@media (max-width: 1150px) {
+@media (max-width: 1250px) {
   .menu-styles a {
     font-size: 1rem;
   }
