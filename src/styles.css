@@ -477,8 +477,14 @@ body {
   height: 2rem;
 }
 
+.input-format {
+  padding: 0 8px;
+  color: var(--heading-color) !important;
+}
+
 .text-area {
   height: 4rem;
+  padding-top: 8px;
 }
 
 .secondary-button {
