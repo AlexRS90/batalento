@@ -57,7 +57,7 @@ body {
   text-decoration: none;
   background: url("../src/assets/images/logo.png") no-repeat center center;
   background-size: contain;
-  width: 30%;
+  width: 18rem;
   height: 10%;
   z-index: 5;
 }
@@ -332,19 +332,20 @@ body {
   flex-direction: column;
   justify-content: start;
   gap: 1rem;
-  max-width: 15%;
+  max-width: 20%;
   background-color: var(--square1-color);
   border-radius: 20px 0 0 20px;
-  padding: 10%;
+  padding: 10% 5% 0 5%;
 }
 
 .team-member {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
+  gap: 8%;
   background-color: white;
   border-radius: 0 20px 20px 0;
   padding: 10% 5% 0 5%;
-  gap: 3rem;
 }
 
 .ceo-container {
@@ -356,7 +357,7 @@ body {
 }
 
 .ceo-container img {
-  width: 25vh;
+  width: 20vh;
 }
 
 .ceo-title {
@@ -366,11 +367,16 @@ body {
   justify-content: center;
 }
 
+.ceo-title p {
+  text-align: center;
+}
+
 .ceo-resume {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  max-width: 60%;
 }
 
 .white-space {
@@ -386,6 +392,7 @@ body {
 
 .met-title {
   margin-bottom: 5%;
+  margin-left: 5%;
 }
 
 .met-cards {
@@ -393,7 +400,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 4% 5%;
   border-radius: 25px;
   margin-bottom: 2%;
