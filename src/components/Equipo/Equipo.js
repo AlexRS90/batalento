@@ -18,24 +18,26 @@ function Equipo() {
     text4,
   } = resume;
   return (
-    <div className="equipo-containter" id="equipo">
-      <div className="team-description">
-        <p className="titulo-secciones">{title}</p>
-        <p className="subtitulo-secciones">{subject}</p>
-      </div>
-      <div className="team-member">
-        <div className="ceo-container">
-          <img src={img} alt={`${id + ceo}`} />
-          <div className="ceo-title">
-            <p className="titulo-texto">{ceo}</p>
-            <p className="texto-general">{position}</p>
-          </div>
+    <div className="equipo-wrapper" id="equipo">
+      <div className="equipo-containter">
+        <div className="team-description">
+          <p className="titulo-secciones">{title}</p>
+          <p className="subtitulo-secciones">{subject}</p>
         </div>
-        <div className="ceo-resume">
-          <p className="texto-general">{text1}</p>
-          <p className="texto-general">{text2}</p>
-          <p className="texto-general">{text3}</p>
-          <p className="texto-general white-space">{text4}</p>
+        <div className="team-member">
+          <div className="ceo-container">
+            <img src={img} alt={`${id + ceo}`} />
+            <div className="ceo-title">
+              <p className="titulo-texto">{ceo}</p>
+              <p className="texto-general">{position}</p>
+            </div>
+          </div>
+          <div className="ceo-resume">
+            <p className="texto-general">{text1}</p>
+            <p className="texto-general">{text2}</p>
+            <p className="texto-general">{text3}</p>
+            <p className="texto-general white-space">{text4}</p>
+          </div>
         </div>
       </div>
     </div>

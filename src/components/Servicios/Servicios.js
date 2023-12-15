@@ -8,11 +8,10 @@ function Servicios() {
 
   return (
     <div className="services-container" id="servicios">
-      <div className="services">
+      <div className="services-cards">
         <p className="titulo-secciones">Servicios</p>
         <p className="subtitulo-secciones">Explora nuestros servicios</p>
       </div>
-      <div className="services-cards" />
       <div className="card-position-absolute">
         <div className="services-info-container">
           <div className="services-img-container">

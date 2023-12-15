@@ -27,7 +27,7 @@ function Menu({
               onClick={() => closeMenu(element)}
               // onKeyPress={handleEnter(value, element)}
             >
-              {element}
+              {element === 'METODOLOGIA' ? 'METODOLOGÍA' : element}
             </a>
           </li>
         ))}

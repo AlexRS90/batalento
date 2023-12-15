@@ -41,7 +41,7 @@ body {
   text-decoration: none;
   font-family: 'Abel', sans-serif;
   color: var(--general-text-color);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .navbar {
@@ -54,11 +54,10 @@ body {
 
 .logo {
   position: absolute;
-  display: fixed;
   text-decoration: none;
   background: url("../src/assets/images/logo.png") no-repeat center center;
   background-size: contain;
-  width: 40%;
+  width: 30%;
   height: 10%;
   z-index: 5;
 }
@@ -155,6 +154,7 @@ body {
 
 .arrows-margin-servicios {
   margin: 1rem 0;
+  padding-right: 1.5rem;
 }
 
 .arrow-buttons > button {
@@ -201,6 +201,7 @@ body {
   justify-content: space-between;
   gap: 2rem;
   margin: 0;
+  padding-right: 5rem;
 }
 
 .card-text {
@@ -208,6 +209,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 3rem;
+  padding-right: 5rem;
 }
 
 .hidden-arrow {
@@ -218,39 +220,33 @@ body {
   padding-left: 10%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .services-container {
   display: flex;
   height: 90vh;
-  justify-content: space-between;
-  margin: 0 0 5% 5%;
-  position: relative;
-}
-
-.services {
-  margin-top: 7%;
-  flex-grow: 1;
+  justify-content: start;
+  padding-left: 5%;
+  background: url("../src/assets/images/servicios.png") no-repeat center center;
+  background-size: 100%;
+  background-position: bottom;
+  gap: 6rem;
 }
 
 .services-cards {
-  background: url("../src/assets/images/servicios.png") no-repeat center center;
-  background-size: 150% auto;
-  background-position: right;
-  flex-grow: 10;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
 }
 
 .card-position-absolute {
-  position: absolute;
-  top: 35%;
-  left: 7%;
-  /* transform: translate(10%px 10px); */
   width: 48%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: end;
+  align-self: center;
 }
 
 .primary-button {
@@ -274,7 +270,8 @@ body {
   display: flex;
   background-color: white;
   border-radius: 25px;
-  justify-content: space-between;
+  justify-content: start;
+  width: 115%;
 }
 
 .services-img-container {
@@ -283,7 +280,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 6%;
+}
+
+.services-img-container img {
+  max-width: 90%;
 }
 
 .services-info-wrapper {
@@ -291,14 +292,14 @@ body {
   flex-direction: column;
   justify-content: start;
   gap: 1rem;
-  width: 20rem;
+  width: 100%;
   padding-left: 5%;
-  padding-right: 5%;
 }
 
 .services-info-wrapper ul {
   padding: 0;
   padding-left: 6%;
+  padding-right: 20%;
 }
 
 .lower-alpha {
@@ -309,14 +310,20 @@ body {
   list-style: disc;
 }
 
+.equipo-wrapper {
+  background-color: var(--square2-color);
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
 .equipo-containter {
   display: flex;
   justify-content: center;
   border-radius: 20px 0 0 20px;
-  margin: 0 0 5% 5%;
-  background: url("../src/assets/images/equipo-fondo.png");
+  /* background: url("../src/assets/images/equipo-fondo.png");
   background-size: cover;
-  background-position: 10rem;
+  background-position: 10rem; */
   height: 70vh;
 }
 
@@ -325,16 +332,18 @@ body {
   flex-direction: column;
   justify-content: start;
   gap: 1rem;
-  max-width: 20%;
+  max-width: 15%;
   background-color: var(--square1-color);
   border-radius: 20px 0 0 20px;
-  padding: 5%;
+  padding: 10%;
 }
 
 .team-member {
   display: flex;
   align-items: flex-start;
-  padding: 5% 5% 0 5%;
+  background-color: white;
+  border-radius: 0 20px 20px 0;
+  padding: 10% 5% 0 5%;
   gap: 3rem;
 }
 
@@ -347,7 +356,7 @@ body {
 }
 
 .ceo-container img {
-  width: 30vh;
+  width: 25vh;
 }
 
 .ceo-title {
@@ -525,6 +534,21 @@ body {
   gap: 0.5rem;
 }
 
+p, li {
+  animation: fadeIn linear both;
+ 
+}
+
+@keyframes fadeIn {  
+  from {  
+      opacity:0;  
+  }  
+
+  to {  
+      opacity:1;  
+  }  
+}
+
 /* Media query
 
 
@@ -555,7 +579,7 @@ pumas
   }
 
   .services-info-wrapper {
-    width: 14rem;
+    /* width: 14rem; */
   }
 }
 

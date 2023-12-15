@@ -8,7 +8,7 @@ import ab from './assets/images/ab.png';
 import fbLogo from './assets/images/facebook.png';
 import inLogo from './assets/images/linkedin.png';
 
-const MENU = ['SERVICIOS', 'EQUIPO', 'METODOLOGÍA', 'CONTACTO'];
+const MENU = ['SERVICIOS', 'EQUIPO', 'METODOLOGIA', 'CONTACTO'];
 
 const OFFICE_CARDS = [
   {
@@ -65,7 +65,7 @@ const SERVICES_CARDS = [
 const EQUIPO = [
   {
     id: 1,
-    title: 'EQUIPO',
+    title: 'Equipo',
     subject: 'Dependiendo de la necesidad, tamaño y ubicación geográfica del proyecto nos apoyamos con un equipo de consultores en la zona y/o de la industria requerida.',
     ceo: 'ABRIL BARRIENTOS AGUIÑAGA',
     position: 'Consultora Principal',
@@ -81,7 +81,7 @@ const EQUIPO = [
 
 const METODOLOGIA = [
   {
-    title: 'METODOLOGÍA',
+    title: 'Metodología',
     subtitle: 'Búsqueda de talento',
     cards: [
       {
@@ -112,15 +112,15 @@ const METODOLOGIA = [
 const FOOTER = [
   {
     logo: ab,
-    fbLogo: fbLogo,
-    inLogo: inLogo,
+    fbLogo,
+    inLogo,
     horario: 'L-V 9 a.m. - 6 p.m.',
     mail: 'abarrientos@batalento.com',
     telefono: '415-153-5671',
     fbURL: 'https://www.facebook.com',
     inURL: 'https://www.linkedin.com',
-  }
-]
+  },
+];
 
 export {
   MENU,

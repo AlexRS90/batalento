@@ -9,7 +9,7 @@ function Metodologia() {
     cierre,
   } = METODOLOGIA[0];
   return (
-    <div className="met-container" id="metodología">
+    <div className="met-container" id="metodologia">
       <div className="met-title">
         <p className="titulo-secciones">{title}</p>
         <p className="subtitulo-secciones">{subtitle}</p>
