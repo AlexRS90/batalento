@@ -13,7 +13,7 @@ function Contacto() {
         <Formulario empleo="Reclutador" />
       </div>
       <a
-        href="https://www.linkedin.com/company/abril-barrientos-talent-expert/?viewAsMember=true"
+        href="https://www.linkedin.com/company/abril-barrientos-talent-expert/jobs/?viewAsMember=true"
         target="_blank"
         rel="noreferrer"
         className="primary-button"

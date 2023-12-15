@@ -105,6 +105,24 @@ body {
   color: var(--heading-color);
 }
 
+.menu-language {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4rem;
+}
+
+.language {
+  width: 100px;
+  height: fit-content;
+  font-family: 'Abel', sans-serif;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  color: var(--general-text-color);
+  cursor: pointer;
+}
+
 .home-wrapper {
   display: flex;
   flex-direction: column;
@@ -412,7 +430,7 @@ body {
   justify-content: start;
   gap: 1rem;
   padding: 2% 5%;
-  width: 35%;
+  width: 30%;
   height: 14em;
   border-radius: 25px;
   background-color: white;
@@ -431,6 +449,7 @@ body {
   flex-direction: column;
   list-style: none;
   padding: 0;
+  padding-right: 10%;
   margin: 0;
 }
 

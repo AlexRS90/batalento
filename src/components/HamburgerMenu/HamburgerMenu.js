@@ -3,17 +3,22 @@ import Menu from '../Menu';
 
 /* eslint-disable react/prop-types */
 
-function HamburgerMenu({ menuSection, setMenuSection, menuOpt }) {
+function HamburgerMenu({
+  menuSection, // eslint-disable-line
+  setMenuSection,
+  menuOpt,
+  language,
+}) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   function toggleMenu() {
-    !isOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
+    !isOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null; // eslint-disable-line
     setIsOpen(!isOpen);
   }
 
   return (
     <div className="toggle-hamburger">
-      <label id="burger" className="hamburger-menu">
+      <label id="burger" className="hamburger-menu"> {/* eslint-disable-line */}
         <input id="burger" type="checkbox" checked={isOpen} onClick={toggleMenu} />
       </label>
       {isOpen
@@ -23,6 +28,7 @@ function HamburgerMenu({ menuSection, setMenuSection, menuOpt }) {
             menuOpt={menuOpt}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
+            language={language}
           />
         )}
     </div>

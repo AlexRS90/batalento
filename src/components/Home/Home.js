@@ -1,21 +1,19 @@
 import React from 'react';
-import { OFFICE_CARDS } from '../../data';
+import { HOME, OFFICE_CARDS } from '../../data';
 import CardEstamosListos from '../CardEstamosListos/CardEstamosListos';
 import ArrowsNavigation from '../ArrowsNavigation/ArrowsNavigation';
 
-function Home() {
+function Home({ language }) {
   const [card, setCard] = React.useState(0);
   const maxCards = OFFICE_CARDS.length - 1;
   const currentCard = OFFICE_CARDS[card];
+  const description = language === 'ENGLISH' ? HOME[0].description : HOME[1].description;
 
   return (
     <div className="home-wrapper">
       <section className="mountains">
         <p className="subtitulo-secciones">
-          Somos una firma de consultoría de Talento en
-          donde consideramos a las personas como la base
-          fundamental para conducir a una organización a
-          la excelencia y al éxito.
+          {description}
         </p>
       </section>
       <section className="office">

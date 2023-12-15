@@ -7,21 +7,21 @@ import { MENU } from '../../data';
 
 function App() {
   const [menuSection, setMenuSection] = React.useState('home');
-  // const [language, setLanguage] = React.useState('English');
+  const [language, setLanguage] = React.useState('ENGLISH');
 
-  // function toggleLanguage() {
-  //  return language === 'English' ? setLanguage('Español') : setLanguage('English');
-  // }
+  function toggleLanguage() {
+    return language === 'ENGLISH' ? setLanguage('ESPAÑOL') : setLanguage('ENGLISH');
+  }
   return (
     <>
       <NavBar
-        // toggleLanguage={toggleLanguage}
+        toggleLanguage={toggleLanguage}// eslint-disable-line
         menuOpt={MENU}
         menuSection={menuSection}
         setMenuSection={setMenuSection}
-        // language={language}
+        language={language}
       />
-      <Home />
+      <Home language={language} />
       <Parallax />
       <Footer />
     </>

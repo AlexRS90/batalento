@@ -7,8 +7,10 @@ function Menu({
   menuOpt,
   isOpen,
   setIsOpen,
+  language,
 }) {
   const menuStyles = isOpen ? 'menu-styles burger-menu' : 'menu-styles inLine-menu';
+  const menuLanguage = language === 'ESPAÑOL' ? menuOpt[1] : menuOpt[0];
 
   function closeMenu(element) {
     if (isOpen) {
@@ -20,7 +22,7 @@ function Menu({
   return (
     <div className="nav-links">
       <ul className="show-menu">
-        {menuOpt.map((element) => (
+        {menuLanguage.map((element) => (
           <li key={Math.random()} className={menuStyles}>
             <a
               href={`#${element.toLowerCase()}`}

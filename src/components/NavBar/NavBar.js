@@ -3,26 +3,34 @@ import InLineMenu from '../InLineMenu';
 import HamburgerMenu from '../HamburgerMenu';
 
 function NavBar({
-  // toggleLanguage,
+  toggleLanguage,
   menuOpt,
   menuSection,
   setMenuSection,
-  // language,
+  language,
 }) {
   return (
     <nav className="navbar" id="navbar">
       <div>
-        <a href="#navbar" className="logo" />
+        <a href="#navbar" className="logo" />{/* eslint-disable-line */}
       </div>
-      <div>
-        <InLineMenu menuSection={menuSection} setMenuSection={setMenuSection} menuOpt={menuOpt} />
-        <HamburgerMenu
-          menuSection={menuSection}
-          setMenuSection={setMenuSection}
-          menuOpt={menuOpt}
-        />
+      <div className="menu-language">
+        <div>
+          <InLineMenu
+            menuSection={menuSection}
+            setMenuSection={setMenuSection}
+            menuOpt={menuOpt}
+            language={language}
+          />
+          <HamburgerMenu
+            menuSection={menuSection}
+            setMenuSection={setMenuSection}
+            menuOpt={menuOpt}
+            language={language}
+          />
+        </div>
+        <button type="button" className="language" onClick={() => toggleLanguage()}>{language}</button>
       </div>
-      {/* <a href="#" className="language" onClick={() => toggleLanguage()}>{language}</a> */}
     </nav>
   );
 }

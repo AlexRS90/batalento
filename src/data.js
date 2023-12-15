@@ -8,7 +8,16 @@ import ab from './assets/images/ab.png';
 import fbLogo from './assets/images/facebook.png';
 import inLogo from './assets/images/linkedin.png';
 
-const MENU = ['SERVICIOS', 'EQUIPO', 'METODOLOGIA', 'CONTACTO'];
+const MENU = [['SERVICIOS', 'EQUIPO', 'METODOLOGIA', 'CONTACTO'], ['SERVICES', 'TEAM', 'METODOLOGY', 'CONTACT']];
+
+const HOME = [
+  {
+    description: 'Somos una firma de consultoría de Talento en donde consideramos a las personas como la base fundamental para conducir a una organización a la excelencia y al éxito.',
+  },
+  {
+    description: 'Insert your description here.',
+  },
+];
 
 const OFFICE_CARDS = [
   {
@@ -118,12 +127,13 @@ const FOOTER = [
     mail: 'abarrientos@batalento.com',
     telefono: '415-153-5671',
     fbURL: 'https://www.facebook.com',
-    inURL: 'https://www.linkedin.com',
+    inURL: 'https://www.linkedin.com/company/abril-barrientos-talent-expert/?viewAsMember=true',
   },
 ];
 
 export {
   MENU,
+  HOME,
   OFFICE_CARDS,
   SERVICES_CARDS,
   EQUIPO,

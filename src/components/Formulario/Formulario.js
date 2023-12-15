@@ -66,7 +66,7 @@ function Formulario({ empleo }) {
         </div>
       </div>
       <div className="form-column">
-        <label htmlFor="mobil-num" className="titulo-texto">
+        <label htmlFor="mobil-num" className="titulo-texto">{/* eslint-disable-line */}
           Celular
         </label>
         <input
@@ -115,7 +115,7 @@ function Formulario({ empleo }) {
           }}
         />
       </div>
-      <button className="secondary-button">
+      <button type="button" className="secondary-button">
         Enviar
       </button>
     </form>
