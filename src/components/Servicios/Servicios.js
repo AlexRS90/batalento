@@ -24,7 +24,7 @@ function Servicios({ language }) {
             <div className="desktop-arrows">
               <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="servicios" />
             </div>
-            <div className="pumas">
+            <div className="services-bullets-wrapper">
               <p className="titulo-texto">{SERVICES_CARDS[card].title}</p>
               <ul className={card === 0 ? 'lower-alpha' : 'bullet-points'}>
                 {SERVICES_CARDS[card].info.split('?').map((bullets) => (

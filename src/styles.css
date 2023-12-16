@@ -788,9 +788,10 @@ pumas
     padding-bottom: 6rem;
   }
 
-  .pumas {
+  .services-bullets-wrapper {
     display: flex;
     flex-direction: column;
+    height: 10rem;
   }
 
   .desktop-arrows {
