@@ -10,18 +10,18 @@ function Home({ language }) {
   const description = language === 'ENGLISH' ? HOME[0].description : HOME[1].description;
 
   return (
-    <div className="home-wrapper">
-      <section className="mountains">
+    <div className="home-wrapper home-parallax">
+      <div className="mountains parallax-mountains parallax__layer">
         <p className="subtitulo-secciones">
           {description}
         </p>
-      </section>
-      <section className="office">
+      </div>
+      <div className="office parallax-office parallax__layer">
         <div className="square-card">
           <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="home" />
           <CardEstamosListos currentCard={currentCard} card={card} />
         </div>
-      </section>
+      </div>
     </div>
   );
 }

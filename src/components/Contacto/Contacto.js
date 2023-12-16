@@ -1,9 +1,10 @@
 import React from 'react';
 import Formulario from '../Formulario/Formulario';
 
-function Contacto() {
+function Contacto({ language }) {
+  const setId = language === 'ESPAÑOL' ? 'contact' : 'contacto';
   return (
-    <div className="contacto-container" id="contacto">
+    <section className="contacto-container np-parallax" id={setId}>
       <div className="contacto-titulo">
         <p className="titulo-secciones">Contacto</p>
         <p className="subtitulo-secciones">Escribenos y con gusto nos ponemos en contacto</p>
@@ -20,7 +21,7 @@ function Contacto() {
       >
         VER VACANTES
       </a>
-    </div>
+    </section>
   );
 }
 

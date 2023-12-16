@@ -124,7 +124,7 @@ const FOOTER = [
     fbLogo,
     inLogo,
     horario: 'L-V 9 a.m. - 6 p.m.',
-    mail: 'abarrientos@batalento.com',
+    mail: 'contacto@batalento.com',
     telefono: '415-153-5671',
     fbURL: 'https://www.facebook.com',
     inURL: 'https://www.linkedin.com/company/abril-barrientos-talent-expert/?viewAsMember=true',

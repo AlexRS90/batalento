@@ -1,15 +1,16 @@
 import React from 'react';
 import { METODOLOGIA } from '../../data';
 
-function Metodologia() {
+function Metodologia({ language }) {
   const {
     title,
     subtitle,
     cards,
     cierre,
   } = METODOLOGIA[0];
+  const setId = language === 'ESPAÑOL' ? 'metodology' : 'metodologia';
   return (
-    <div className="met-container" id="metodologia">
+    <section className="met-container parallax" id={setId}>
       <div className="met-title">
         <p className="titulo-secciones">{title}</p>
         <p className="subtitulo-secciones">{subtitle}</p>
@@ -30,7 +31,7 @@ function Metodologia() {
       <div className="met-cierre">
         <p className="subtitulo-secciones">{cierre}</p>
       </div>
-    </div>
+    </section>
   );
 }
 

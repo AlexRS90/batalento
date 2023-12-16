@@ -137,7 +137,7 @@ body {
 }
 
 .mountains p {
-  margin-top: 2rem;
+  margin-top: 4rem;
   width: 55%;
   text-align: center;
 }
@@ -153,7 +153,7 @@ body {
 
 .square-card {
   background-color: var(--square2-color);
-  border-radius: 25px;
+  border-radius: 40px;
   width: 50%;
   height: 50%;
   margin: 8%;
@@ -200,7 +200,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 4rem;
-  padding-left: 2rem;
+  padding-left: 3rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
 }
@@ -249,7 +249,7 @@ body {
   background: url("../src/assets/images/servicios.png") no-repeat center center;
   background-size: 100%;
   background-position: bottom;
-  gap: 6rem;
+  gap: 11rem;
 }
 
 .services-cards {
@@ -287,14 +287,14 @@ body {
 .services-info-container {
   display: flex;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 40px;
   justify-content: start;
   width: 115%;
 }
 
 .services-img-container {
   background-color: var(--square2-color);
-  border-radius: 20px 0 0 20px;
+  border-radius: 40px 0 0 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,20 +328,33 @@ body {
   list-style: disc;
 }
 
+.desktop-arrows {
+  display: block;
+}
+
+.mobil-arrows {
+  display: none;
+}
+
+.desktop-service-button {
+  display: block;
+}
+
+.mobil-service-button {
+  display: none;
+}
+
 .equipo-wrapper {
   background-color: var(--square2-color);
   display: flex;
   justify-content: center;
-  padding: 5%;
+  padding: 10% 5%;
 }
 
 .equipo-containter {
   display: flex;
   justify-content: center;
-  border-radius: 20px 0 0 20px;
-  /* background: url("../src/assets/images/equipo-fondo.png");
-  background-size: cover;
-  background-position: 10rem; */
+  border-radius: 40px 0 0 40px;
   height: 70vh;
 }
 
@@ -352,7 +365,7 @@ body {
   gap: 1rem;
   max-width: 20%;
   background-color: var(--square1-color);
-  border-radius: 20px 0 0 20px;
+  border-radius: 40px 0 0 40px;
   padding: 10% 5% 0 5%;
 }
 
@@ -362,7 +375,7 @@ body {
   justify-content: center;
   gap: 8%;
   background-color: white;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 40px 40px 0;
   padding: 10% 5% 0 5%;
 }
 
@@ -420,7 +433,7 @@ body {
   justify-content: center;
   gap: 1.5rem;
   padding: 4% 5%;
-  border-radius: 25px;
+  border-radius: 40px;
   margin-bottom: 2%;
 }
 
@@ -432,7 +445,7 @@ body {
   padding: 2% 5%;
   width: 30%;
   height: 14em;
-  border-radius: 25px;
+  border-radius: 40px;
   background-color: white;
 }
 
@@ -455,8 +468,8 @@ body {
 
 .met-cierre {
   background-color: var(--square2-color);
-  border-radius: 25px;
-  padding: 2% 25%;
+  border-radius: 40px;
+  padding: 4% 25%;
   text-align: center;
 }
 
@@ -560,21 +573,6 @@ body {
   gap: 0.5rem;
 }
 
-p, li {
-  animation: fadeIn linear both;
- 
-}
-
-@keyframes fadeIn {  
-  from {  
-      opacity:0;  
-  }  
-
-  to {  
-      opacity:1;  
-  }  
-}
-
 /* Media query
 
 
@@ -600,12 +598,17 @@ pumas
     gap: 6rem;
   }
 
-  .card-position-absolute {
-    left: 15%;
+  .services-container {
+    gap: 9rem;
   }
 
-  .services-info-wrapper {
-    /* width: 14rem; */
+  .services-info-container {
+    width: 135%;
+    height: 15rem;
+  }
+
+  .met-card-wrapper {
+    height: 20em;
   }
 }
 
@@ -702,6 +705,14 @@ pumas
     position: absolute;
   }
 
+  .card-text {
+    padding-right: 1.5rem;
+  }
+
+  .bullet-container {
+    padding-right: 1.5rem;
+  }
+
   .square-card {
     position: relative;
     max-width: 80%;
@@ -722,24 +733,63 @@ pumas
 
   .services-container {
     flex-direction: column;
-    min-width: -webkit-fill-available;
+    /* min-width: -webkit-fill-available; */
+    background-position: left;
+    background-size: cover;
   }
 
   .services-cards {
     background-position: bottom;
   }
 
+  .card-position-absolute {
+    width: 85%;
+    align-items: baseline;
+    margin-top: 10rem;
+  }
+
   .services-info-container {
     flex-direction: column;
-    margin: 40% 20% 50% 20%;
+    justify-content: end;
+    width: 90%;
+    height: 15rem;
+    border: 2px solid rebeccapurple;
+    border-radius: 0 0 40px 40px;
   }
 
   .services-img-container {
-    border-radius: 20px 20px 0 0;
+    border-radius: 40px 40px 0 0;
+    flex-direction: column;
   }
 
   .services-info-wrapper {
     padding-left: 10%;
-    padding-right: 10%;
+    width: auto;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+
+  .pumas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop-arrows {
+    display: none;
+  }
+
+  .mobil-arrows {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .desktop-service-button {
+    display: none;
+  }
+
+  .mobil-service-button {
+    display: block;
+    align-self: flex-end;
+    margin-right: 4rem;
   }
 }

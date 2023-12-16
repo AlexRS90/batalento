@@ -40,7 +40,7 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={fbLogo} />
+          <img src={fbLogo} alt="Open Facebook" />
         </a>
         <a
           className="footer-IN"
@@ -48,7 +48,7 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={inLogo} />
+          <img src={inLogo} alt="Open LinkedIn" />
         </a>
       </div>
     </div>

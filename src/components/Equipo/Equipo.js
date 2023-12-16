@@ -1,7 +1,8 @@
 import React from 'react';
 import { EQUIPO } from '../../data';
 
-function Equipo() {
+function Equipo({ language }) {
+  const setId = language === 'ESPAÑOL' ? 'team' : 'equipo';
   const {
     id,
     title,
@@ -18,7 +19,7 @@ function Equipo() {
     text4,
   } = resume;
   return (
-    <div className="equipo-wrapper" id="equipo">
+    <section className="equipo-wrapper no-parallax" id={setId}>
       <div className="equipo-containter">
         <div className="team-description">
           <p className="titulo-secciones">{title}</p>
@@ -40,7 +41,7 @@ function Equipo() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -4,13 +4,13 @@ import Equipo from '../Equipo/Equipo';
 import Metodologia from '../Metodologia/Metodologia';
 import Contacto from '../Contacto/Contacto';
 
-function Parallax() {
+function Parallax({ language }) {
   return (
-    <div>
-      <Servicios />
-      <Equipo />
-      <Metodologia />
-      <Contacto />
+    <div className="parallax-container">
+      <Servicios language={language} />
+      <Equipo language={language} />
+      <Metodologia language={language} />
+      <Contacto language={language} />
     </div>
   );
 }

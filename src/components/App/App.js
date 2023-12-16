@@ -22,8 +22,8 @@ function App() {
         language={language}
       />
       <Home language={language} />
-      <Parallax />
-      <Footer />
+      <Parallax language={language} />
+      <Footer language={language} />
     </>
   );
 }
