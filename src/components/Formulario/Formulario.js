@@ -22,7 +22,7 @@ function Formulario({ empleo }) {
     setMobileNumber('');
     setEmail('');
     setTextArea('');
-    window.alert(JSON.stringify(data, null, 4));
+    window.alert(JSON.stringify(data, null, 4)); // eslint-disable-line
   }
   return (
     <form className="form-container" onSubmit={handleForm}>
