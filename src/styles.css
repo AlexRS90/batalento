@@ -751,9 +751,10 @@ pumas
 
   .services-container {
     flex-direction: column;
-    /* min-width: -webkit-fill-available; */
     background-position: left;
     background-size: cover;
+    height: 58rem;
+    gap: 16rem;
   }
 
   .services-cards {
@@ -761,17 +762,17 @@ pumas
   }
 
   .card-position-absolute {
-    width: 85%;
+    width: 90%;
     align-items: baseline;
-    margin-top: 10rem;
+    margin-top: 6rem;
+    gap: unset;
   }
 
   .services-info-container {
     flex-direction: column;
     justify-content: end;
     width: 90%;
-    height: 15rem;
-    border: 2px solid rebeccapurple;
+    height: 20rem;
     border-radius: 0 0 40px 40px;
   }
 
