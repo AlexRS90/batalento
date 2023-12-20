@@ -879,4 +879,12 @@ pumas
     padding: 20%;
     background-color: white;
   }
+
+  .form-container {
+    width: -webkit-fill-available;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
 }
