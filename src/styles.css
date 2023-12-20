@@ -843,4 +843,40 @@ pumas
   .ceo-resume {
     max-width: 80%;
   }
+
+  .met-container {
+    margin: 0;
+  }
+
+  .met-title {
+    margin: 10% 0 10% 15%;
+  }
+
+  .met-cards {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: white;
+    gap: 0;
+    padding: 0;
+  }
+
+  .met-card-wrapper {
+    width: auto;
+    height: 15em;
+    padding: 10% 10% 0 10%;
+    border-radius: 0;
+  }
+
+  .met-card-wrapper:last-child {
+    height: 12em;
+  }
+
+  .met-card-wrapper:nth-child(even) {
+    background-color: var(--square1-color);
+  }
+
+  .met-cierre {
+    padding: 20%;
+    background-color: white;
+  }
 }

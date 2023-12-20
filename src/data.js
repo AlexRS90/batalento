@@ -67,7 +67,7 @@ const SERVICES_CARDS = [
     id: 5,
     img: coaching,
     title: 'Coaching/Team Building',
-    info: '',
+    info: 'Próximamente',
   },
 ];
 
@@ -124,7 +124,7 @@ const FOOTER = [
     fbLogo,
     inLogo,
     horario: 'L-V 9 a.m. - 6 p.m.',
-    mail: 'contacto@batalento.com',
+    mail: 'abarrientos@batalento.com',
     telefono: '415-153-5671',
     fbURL: 'https://www.facebook.com',
     inURL: 'https://www.linkedin.com/company/abril-barrientos-talent-expert/?viewAsMember=true',
