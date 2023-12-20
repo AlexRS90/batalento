@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../NavBar';
 import Home from '../Home/Home';
 import Parallax from '../Parallax/Parallax';
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 import { MENU } from '../../data';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       />
       <Home language={language} />
       <Parallax language={language} />
-      {/* <Footer language={language} /> */}
+      <Footer language={language} />
     </>
   );
 }

@@ -133,13 +133,22 @@ body {
   background-size: cover;
   min-height: 60vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .mountains p {
-  margin-top: 4rem;
-  width: 55%;
+  width: 70%;
   text-align: center;
+}
+
+.mountains p:first-child {
+  margin-top: 4rem;
+}
+
+.mountains p:last-child {
+  margin-bottom: 4rem;
 }
 
 .office {
@@ -556,7 +565,7 @@ body {
 
 .footer-data {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
 }
@@ -605,6 +614,10 @@ pumas
 @media (max-width: 1250px) {
   .menu-styles a {
     font-size: 1rem;
+  }
+
+  .show-menu {
+    gap: 10px;
   }
 
   .square-card {
@@ -686,13 +699,23 @@ pumas
   .hamburger-menu:has(input:checked)::before {
     rotate: 45deg;
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -4.5);
+    translate: 0 calc(var(--bar-height) / -5);
   }
 
   .hamburger-menu:has(input:checked)::after {
     rotate: -45deg;
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 4.5);
+    translate: 0 calc(var(--bar-height) / 5);
+  }
+
+  .menu-language {
+    flex-direction: row-reverse;
+    gap: 5%;
+  }
+
+  .language {
+    align-self: flex-end;
+    margin-top: 9px;
   }
 
   .nav-links {
