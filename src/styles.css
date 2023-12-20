@@ -114,7 +114,7 @@ body {
 
 .language {
   width: 100px;
-  height: fit-content;
+  height: fit-content; /* stylelint-disable-line */
   font-family: 'Abel', sans-serif;
   font-size: 1rem;
   border: none;
@@ -140,6 +140,10 @@ body {
 
 .mountains p {
   width: 70%;
+  text-align: center;
+}
+
+.ceo-title p {
   text-align: center;
 }
 
@@ -193,14 +197,16 @@ body {
   cursor: pointer;
 }
 
-.right-arrow, .left-arrow {
+.right-arrow,
+.left-arrow {
   fill: var(--heading-color);
   background-color: var(--square1-color);
   border-radius: 50%;
   padding: 5px;
 }
 
-.right-arrow:hover, .left-arrow:hover {
+.right-arrow:hover,
+.left-arrow:hover {
   background-color: var(--heading-color);
   fill: var(--square1-color);
 }
@@ -289,8 +295,8 @@ body {
 }
 
 .primary-button:hover {
-  background-color: VAR(--square2-color);
-  color: VAR(--heading-color);
+  background-color: var(--square2-color);
+  color: var(--heading-color);
 }
 
 .services-info-container {
@@ -330,7 +336,7 @@ body {
 }
 
 .lower-alpha {
-  list-style: lower-alpha
+  list-style: lower-alpha;
 }
 
 .bullet-points {
@@ -405,10 +411,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.ceo-title p {
-  text-align: center;
 }
 
 .ceo-resume {
@@ -584,7 +586,6 @@ body {
 
 /* Media query
 
-
 pumas
 pumas
 pumas
@@ -652,7 +653,7 @@ pumas
   .toggle-inLine {
     display: none;
   }
-  
+
   .toggle-hamburger {
     display: block;
   }
@@ -671,13 +672,16 @@ pumas
     height: var(--bar-height);
     background-color: var(--general-text-color);
     transform-origin: left center;
-    transition: width var(--animation-timing), rotate var(--animation-timing),
+    transition:
+      width var(--animation-timing),
+      rotate var(--animation-timing),
       translate var(--animation-timing);
     z-index: 5;
   }
-  
+
   .hamburger-menu {
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
     display: flex;
     padding-top: 1rem;
     flex-direction: column;
@@ -843,7 +847,7 @@ pumas
   .equipo-containter {
     flex-direction: column;
     background-color: var(--square1-color);
-    height: -webkit-fill-available;
+    height: -webkit-fill-available; /* stylelint-disable-line */
     border-radius: 40px;
     padding-bottom: 20%;
   }
@@ -904,7 +908,7 @@ pumas
   }
 
   .form-container {
-    width: -webkit-fill-available;
+    width: -webkit-fill-available; /* stylelint-disable-line */
   }
 
   .form-row {
