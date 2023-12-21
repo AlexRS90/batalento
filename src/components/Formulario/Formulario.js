@@ -25,7 +25,12 @@ function Formulario({ empleo }) {
     window.alert(JSON.stringify(data, null, 4)); // eslint-disable-line
   }
   return (
-    <form className="form-container" onSubmit={handleForm}>
+    <form
+      className="form-container"
+      action="https://formsubmit.co/development@batalento.coom"
+      method="POST"
+      onSubmit={handleForm}
+    >
       <p className="titulo-form">{empleo === 'Aspirante' ? 'Aspirantes' : 'Reclutador'}</p>
       <div className="form-row">
         <div className="form-column">
@@ -36,6 +41,7 @@ function Formulario({ empleo }) {
           </label>
           <input
             id="first-name"
+            name="first-name"
             required
             type="text"
             className="input-text input-format"
@@ -54,6 +60,7 @@ function Formulario({ empleo }) {
           </label>
           <input
             id="last-name"
+            name="last-name"
             required
             type="text"
             autoComplete="family-name"
@@ -71,6 +78,7 @@ function Formulario({ empleo }) {
         </label>
         <input
           id="mobil-num"
+          name="phone-number"
           type="number"
           className="input-text input-format"
           autoComplete="tel-national"
@@ -88,6 +96,7 @@ function Formulario({ empleo }) {
         </label>
         <input
           id="email"
+          name="email"
           required
           type="email"
           className="input-text input-format"
@@ -106,6 +115,7 @@ function Formulario({ empleo }) {
         </label>
         <textarea
           id="expertice"
+          name="message"
           required
           type="text"
           className="input-text text-area input-format"
@@ -115,7 +125,7 @@ function Formulario({ empleo }) {
           }}
         />
       </div>
-      <button type="button" className="secondary-button">
+      <button type="submit" className="secondary-button">
         Enviar
       </button>
     </form>
