@@ -560,14 +560,6 @@ body {
   border-radius: 10px;
 }
 
-.show {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
 .secondary-button {
   width: 25%;
   align-self: flex-start;
