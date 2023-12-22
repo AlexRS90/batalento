@@ -1,35 +1,36 @@
 import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 function Formulario({ empleo }) {
+  const [flash, setFlash] = React.useState(false);
   const [firstName, setFirstName] = React.useState('');
   const [lastName, setLastName] = React.useState('');
   const [mobilNumber, setMobileNumber] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [textArea, setTextArea] = React.useState('');
+  const [state, handleSubmit] = useForm(empleo === 'Aspirante' ? 'xvoepwwk' : 'xvoepwyg');
 
-  function handleForm(event) {
-    event.preventDefault();
-    const data = {
-      aplicacion: empleo,
-      nombre: firstName,
-      apellido: lastName,
-      telefono: mobilNumber,
-      email,
-      mensaje: textArea,
-    };
-    setFirstName('');
-    setLastName('');
-    setMobileNumber('');
-    setEmail('');
-    setTextArea('');
-    window.alert(JSON.stringify(data, null, 4)); // eslint-disable-line
-  }
+  React.useEffect(() => {
+    if (state.succeeded) {
+      setFlash(true);
+      setFirstName('');
+      setLastName('');
+      setMobileNumber('');
+      setEmail('');
+      setTextArea('');
+    }
+  });
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setFlash(false);
+    });
+  }, [flash]);
+
   return (
     <form
       className="form-container"
-      action="https://formsubmit.co/development@batalento.coom"
-      method="POST"
-      onSubmit={handleForm}
+      onSubmit={handleSubmit}
     >
       <p className="titulo-form">{empleo === 'Aspirante' ? 'Aspirantes' : 'Reclutador'}</p>
       <div className="form-row">
@@ -44,6 +45,8 @@ function Formulario({ empleo }) {
             name="first-name"
             required
             type="text"
+            minLength={2}
+            maxLength={20}
             className="input-text input-format"
             autoComplete="given-name"
             value={firstName}
@@ -63,6 +66,8 @@ function Formulario({ empleo }) {
             name="last-name"
             required
             type="text"
+            minLength={5}
+            maxLength={40}
             autoComplete="family-name"
             className="input-text input-format"
             value={lastName}
@@ -81,10 +86,12 @@ function Formulario({ empleo }) {
           name="phone-number"
           type="number"
           className="input-text input-format"
+          minLength={10}
+          maxLength={10}
           autoComplete="tel-national"
           value={mobilNumber}
           onChange={(event) => {
-            setMobileNumber(event.target.value);
+            setMobileNumber(event.target.value.slice(0, 10));
           }}
         />
       </div>
@@ -106,6 +113,12 @@ function Formulario({ empleo }) {
             setEmail(event.target.value);
           }}
         />
+        <ValidationError
+          prefix="Email"
+          field="email"
+          className="email-error"
+          errors={state.errors}
+        />
       </div>
       <div className="form-column">
         <label htmlFor="expertice" className="titulo-texto">
@@ -117,6 +130,7 @@ function Formulario({ empleo }) {
           id="expertice"
           name="message"
           required
+          maxLength={300}
           type="text"
           className="input-text text-area input-format"
           value={textArea}
@@ -124,10 +138,23 @@ function Formulario({ empleo }) {
             setTextArea(event.target.value);
           }}
         />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
       </div>
-      <button type="submit" className="secondary-button">
-        Enviar
-      </button>
+      <div className="form-footer">
+        <button
+          type="submit"
+          className="secondary-button"
+          disabled={state.submitting}
+        >
+          Enviar
+        </button>
+        {flash
+          && <p className="form-submition">Envío exitoso</p>}
+      </div>
     </form>
   );
 }
