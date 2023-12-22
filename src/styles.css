@@ -113,7 +113,7 @@ body {
 }
 
 .language {
-  width: 100px;
+  width: auto;
   height: fit-content; /* stylelint-disable-line */
   font-family: 'Abel', sans-serif;
   font-size: 1rem;
@@ -542,6 +542,24 @@ body {
   padding-top: 8px;
 }
 
+.email-error {
+  color: red;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-submition {
+  background-color: green;
+  color: yellowgreen;
+  padding: 15px 50px;
+  margin: 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
 .secondary-button {
   width: 25%;
   align-self: flex-start;
@@ -662,7 +680,7 @@ pumas
     background: url("../src/assets/images/logo-mobil.png") no-repeat center center;
     background-size: contain;
     width: 50%;
-    height: 5%;
+    height: 4%;
   }
 
   .hamburger-menu::before,
@@ -683,7 +701,6 @@ pumas
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
     display: flex;
-    padding-top: 1rem;
     flex-direction: column;
     gap: var(--hamburger-gap);
     border-radius: 10px;
@@ -694,6 +711,7 @@ pumas
     content: '';
     appearance: none;
     padding: 0;
+    max-height: 0.5px;
     margin: 0;
     outline: none;
     pointer-events: none;
@@ -703,23 +721,22 @@ pumas
   .hamburger-menu:has(input:checked)::before {
     rotate: 45deg;
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -5);
+    translate: 0 calc(var(--bar-height) / -9);
   }
 
   .hamburger-menu:has(input:checked)::after {
     rotate: -45deg;
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 5);
+    translate: 0 calc(var(--bar-height) / 9);
   }
 
   .menu-language {
     flex-direction: row-reverse;
-    gap: 5%;
+    gap: 10%;
   }
 
   .language {
     align-self: flex-end;
-    margin-top: 9px;
   }
 
   .nav-links {
@@ -730,15 +747,6 @@ pumas
     background-color: var(--square2-color);
     width: 100%;
     height: 100vh;
-    animation-duration: 0.5s;
-    animation-name: animate-fade;
-    animation-fill-mode: backwards;
-    z-index: 4;
-  }
-
-  @keyframes animate-fade {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
   }
 
   .show-menu {
@@ -847,7 +855,7 @@ pumas
   .equipo-containter {
     flex-direction: column;
     background-color: var(--square1-color);
-    height: -webkit-fill-available; /* stylelint-disable-line */
+    height: auto;
     border-radius: 40px;
     padding-bottom: 20%;
   }
@@ -892,6 +900,10 @@ pumas
     height: 15em;
     padding: 10% 10% 0 10%;
     border-radius: 0;
+  }
+
+  .met-card-wrapper:first-child {
+    padding-bottom: 10%;
   }
 
   .met-card-wrapper:last-child {
