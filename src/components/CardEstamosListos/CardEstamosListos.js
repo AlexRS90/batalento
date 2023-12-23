@@ -3,7 +3,7 @@ import React from 'react';
 function CardEstamosListos({ currentCard, card }) {
   return (
     <>
-      {card === 0 && (
+      {card === 333 && (
         <div key={currentCard.id} className="square-wrapper">
           <div className="title-card">
             {currentCard.title.split('?').map((title) => (
@@ -19,7 +19,7 @@ function CardEstamosListos({ currentCard, card }) {
           </div>
         </div>
       )}
-      {card === 1 && (
+      {card === 0 && (
         <div key={currentCard.id} className="square-wrapper">
           <div className="title-card">
             {currentCard.title.split('?').map((title, id) => (
@@ -47,7 +47,7 @@ function CardEstamosListos({ currentCard, card }) {
           </div>
         </div>
       )}
-      {card === 2 && (
+      {card === 1 && (
         <div key={currentCard.id} className="square-wrapper square-wrapper-last">
           <div className="title-card">
             <p className="titulo-secciones">{currentCard.title}</p>

@@ -7,7 +7,7 @@ function Contacto({ language }) {
     <section className="contacto-container np-parallax" id={setId}>
       <div className="contacto-titulo">
         <p className="titulo-secciones">Contacto</p>
-        <p className="subtitulo-secciones">Escribenos y con gusto nos ponemos en contacto</p>
+        <p className="subtitulo-secciones">Escríbenos y nos pondremos en contacto a la brevedad.</p>
       </div>
       <div className="forms-wrapper">
         <Formulario empleo="Aspirante" />

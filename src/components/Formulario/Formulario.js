@@ -32,7 +32,7 @@ function Formulario({ empleo }) {
       className="form-container"
       onSubmit={handleSubmit}
     >
-      <p className="titulo-form">{empleo === 'Aspirante' ? 'Aspirantes' : 'Reclutador'}</p>
+      <p className="titulo-form">{empleo === 'Aspirante' ? 'Candidatos' : 'Clientes'}</p>
       <div className="form-row">
         <div className="form-column">
           <label htmlFor="first-name" className="titulo-texto">
