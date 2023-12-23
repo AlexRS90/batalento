@@ -471,7 +471,7 @@ body {
 .met-card-list {
   display: flex;
   flex-direction: column;
-  list-style: none;
+  list-style: disc;
   padding: 0;
   padding-right: 10%;
   margin: 0;
