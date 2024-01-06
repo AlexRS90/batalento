@@ -9,8 +9,24 @@ function Home({ language }) {
   const currentCard = OFFICE_CARDS[card];
   const description = language === 'ENGLISH' ? HOME[0] : HOME[1];
 
+  function reveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {/* eslint-disable-line */
+      const windowHeght = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeght - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', reveal);
+
   return (
-    <div className="home-wrapper home-parallax">
+    <div className="home-wrapper">
       <div className="mountains">
         <p className="subtitulo-secciones white-space">
           {description.text1}
@@ -22,7 +38,7 @@ function Home({ language }) {
           {description.text3}
         </p>
       </div>
-      <div className="office parallax-office parallax__layer">
+      <div className="office reveal">
         <div className="square-card">
           <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="home" />
           <CardEstamosListos currentCard={currentCard} card={card} />
