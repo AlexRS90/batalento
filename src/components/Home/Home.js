@@ -38,8 +38,8 @@ function Home({ language }) {
           {description.text3}
         </p>
       </div>
-      <div className="office reveal">
-        <div className="square-card">
+      <div className="office">
+        <div className="square-card reveal">
           <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="home" />
           <CardEstamosListos currentCard={currentCard} card={card} />
         </div>
