@@ -495,7 +495,7 @@ body {
   flex-direction: column;
   padding: 5%;
   align-items: flex-start;
-  background-color: #7b7a7b;
+  background-color: var(--square2-color);
 }
 
 .contacto-container a {
