@@ -6,7 +6,7 @@ import Contacto from '../Contacto/Contacto';
 
 function Parallax({ language }) {
   return (
-    <div className="parallax-container">
+    <div className="parallax-wrapper">
       <Servicios language={language} />
       <Equipo language={language} />
       <Metodologia language={language} />

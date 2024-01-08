@@ -7,7 +7,7 @@ function Servicios({ language }) {
   const maxCards = SERVICES_CARDS.length - 1;
   const setId = language === 'ESPAÑOL' ? 'services' : 'servicios';
   return (
-    <section className="services-container parallax" id={setId}>
+    <section className="services-container parallax-sections" id={setId}>
       <div className="services-cards">
         <p className="titulo-secciones">Servicios</p>
         <p className="subtitulo-secciones">Explora nuestros servicios</p>

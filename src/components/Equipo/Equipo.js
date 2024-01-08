@@ -19,7 +19,7 @@ function Equipo({ language }) {
     text4,
   } = resume;
   return (
-    <section className="equipo-wrapper no-parallax" id={setId}>
+    <section className="equipo-wrapper" id={setId}>
       <div className="equipo-containter">
         <div className="team-description">
           <p className="titulo-secciones">{title}</p>

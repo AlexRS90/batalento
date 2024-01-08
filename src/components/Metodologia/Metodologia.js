@@ -10,7 +10,7 @@ function Metodologia({ language }) {
   } = METODOLOGIA[0];
   const setId = language === 'ESPAÑOL' ? 'metodology' : 'metodologia';
   return (
-    <section className="met-container parallax" id={setId}>
+    <section className="met-container parallax-sections" id={setId}>
       <div className="met-title">
         <p className="titulo-secciones">{title}</p>
         <p className="subtitulo-secciones">{subtitle}</p>

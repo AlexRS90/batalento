@@ -12,10 +12,10 @@ function Home({ language }) {
   function reveal() {
     const reveals = document.querySelectorAll('.reveal');
     for (let i = 0; i < reveals.length; i++) {/* eslint-disable-line */
-      const windowHeght = window.innerHeight;
+      const windowHeight = window.innerHeight;
       const elementTop = reveals[i].getBoundingClientRect().top;
-      const elementVisible = 150;
-      if (elementTop < windowHeght - elementVisible) {
+      const elementVisible = 500;
+      if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add('active');
       } else {
         reveals[i].classList.remove('active');
@@ -26,7 +26,7 @@ function Home({ language }) {
   window.addEventListener('scroll', reveal);
 
   return (
-    <div className="home-wrapper">
+    <div className="home-wrapper parallax-wrapper">
       <div className="mountains">
         <p className="subtitulo-secciones white-space">
           {description.text1}
