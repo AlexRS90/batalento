@@ -233,6 +233,11 @@ body {
   width: 30%;
 }
 
+.title-card-hidden {
+  opacity: 0;
+  transition: opacity 1s 1s ease;
+}
+
 .bullet-container {
   display: flex;
   flex-direction: column;
@@ -240,6 +245,8 @@ body {
   gap: 2rem;
   margin: 0;
   padding-right: 5rem;
+  opacity: 0;
+  transition: opacity 1s 2s ease;
 }
 
 .card-text {
@@ -616,6 +623,10 @@ body {
 
 .active {
   opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .parallax-wrapper {

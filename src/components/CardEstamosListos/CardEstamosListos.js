@@ -1,6 +1,7 @@
 import React from 'react';
 
-function CardEstamosListos({ currentCard, card }) {
+function CardEstamosListos({ currentCard, card, activeClass }) {
+  const hiddenDelay = activeClass ? 'active' : 'hidden';
   return (
     <>
       {card === 333 && (
@@ -21,7 +22,7 @@ function CardEstamosListos({ currentCard, card }) {
       )}
       {card === 0 && (
         <div key={currentCard.id} className="square-wrapper">
-          <div className="title-card">
+          <div className={`title-card title-card-hidden ${hiddenDelay}`}>
             {currentCard.title.split('?').map((title, id) => (
               <p
                 key={Math.random()}
@@ -31,7 +32,7 @@ function CardEstamosListos({ currentCard, card }) {
               </p>
             ))}
           </div>
-          <div className="bullet-container content-card">
+          <div className={`bullet-container content-card ${hiddenDelay}`}>
             {currentCard.text_info.split('?').map((text) => (
               <div key={Math.random()}>
                 {text.split('¿').map((info, id) => (

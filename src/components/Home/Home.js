@@ -5,6 +5,7 @@ import ArrowsNavigation from '../ArrowsNavigation/ArrowsNavigation';
 
 function Home({ language }) {
   const [card, setCard] = React.useState(0);
+  const [activeClass, setActiveClass] = React.useState(false);
   const maxCards = OFFICE_CARDS.length - 1;
   const currentCard = OFFICE_CARDS[card];
   const description = language === 'ENGLISH' ? HOME[0] : HOME[1];
@@ -17,8 +18,10 @@ function Home({ language }) {
       const elementVisible = 500;
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add('active');
+        setActiveClass(true);
       } else {
         reveals[i].classList.remove('active');
+        setActiveClass(false);
       }
     }
   }
@@ -41,7 +44,7 @@ function Home({ language }) {
       <div className="office">
         <div className="square-card reveal">
           <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="home" />
-          <CardEstamosListos currentCard={currentCard} card={card} />
+          <CardEstamosListos currentCard={currentCard} card={card} activeClass={activeClass} />
         </div>
       </div>
     </div>
