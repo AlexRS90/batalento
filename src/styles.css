@@ -332,6 +332,11 @@ body {
   max-width: 90%;
 }
 
+.services-img {
+  opacity: 0;
+  transition: opacity 1s 1s ease;
+}
+
 .services-info-wrapper {
   display: flex;
   flex-direction: column;
@@ -339,6 +344,11 @@ body {
   gap: 1rem;
   width: 100%;
   padding-left: 5%;
+}
+
+.services-info {
+  opacity: 0;
+  transition: opacity 1s 2s ease;
 }
 
 .services-info-wrapper ul {
@@ -617,6 +627,11 @@ body {
 }
 
 .reveal {
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-services {
   opacity: 0;
   transition: 1s all ease;
 }

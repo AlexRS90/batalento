@@ -32,7 +32,7 @@ function CardEstamosListos({ currentCard, card, activeClass }) {
               </p>
             ))}
           </div>
-          <div className={`bullet-container content-card ${hiddenDelay}`}>
+          <div className={`bullet-container ${hiddenDelay}`}>
             {currentCard.text_info.split('?').map((text) => (
               <div key={Math.random()}>
                 {text.split('¿').map((info, id) => (
