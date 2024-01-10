@@ -406,6 +406,11 @@ body {
   padding: 10% 5% 0 5%;
 }
 
+.team-description-hidden {
+  opacity: 0;
+  transition: opacity 1s 1s ease;
+}
+
 .team-member {
   display: flex;
   align-items: flex-start;
@@ -416,12 +421,19 @@ body {
   padding: 10% 5% 0 5%;
 }
 
+.team-member-hidden {
+  opacity: 0;
+  transition: opacity 1s 2s ease;
+}
+
 .ceo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
   align-items: center;
+  opacity: 0;
+  transition: opacity 1s 2s ease;
 }
 
 .ceo-container img {
@@ -441,6 +453,8 @@ body {
   justify-content: center;
   gap: 1rem;
   max-width: 60%;
+  opacity: 0;
+  transition: opacity 1s 2s ease;
 }
 
 .white-space {
@@ -632,6 +646,11 @@ body {
 }
 
 .reveal-services {
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-team {
   opacity: 0;
   transition: 1s all ease;
 }

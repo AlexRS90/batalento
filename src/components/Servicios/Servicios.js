@@ -5,7 +5,7 @@ import ArrowsNavigation from '../ArrowsNavigation/ArrowsNavigation';
 function Servicios({ language }) {
   const [card, setCard] = React.useState(0);
   const [activeClass, setActiveClass] = React.useState(false);
-  const hiddenDelay = activeClass ? 'service-img active' : 'service-img hidden'; /* eslint-disable-line */
+  const hiddenDelay = activeClass ? 'service-img active' : 'service-img hidden';
   const maxCards = SERVICES_CARDS.length - 1;
   const setId = language === 'ESPAÑOL' ? 'services' : 'servicios';
 
