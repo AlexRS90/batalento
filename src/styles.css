@@ -496,6 +496,11 @@ body {
   border-radius: 40px;
   background-color: white;
   opacity: 0;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-name: appear-in;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .met-card-num {
@@ -517,23 +522,28 @@ body {
 }
 
 .reveal-card-1 {
-  transition: opacity 1s 1s ease;
+  animation-delay: 0.5s;
 }
 
 .reveal-card-2 {
-  transition: opacity 1s 1.5s ease;
+  animation-delay: 1s;
 }
 
 .reveal-card-3 {
-  transition: opacity 1s 2s ease;
+  animation-delay: 1.5s;
 }
 
 .reveal-card-4 {
-  transition: opacity 1s 2.5s ease;
+  animation-delay: 2s;
 }
 
-.active1 {
-  opacity: 1;
+@keyframes appear-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .met-cierre {
