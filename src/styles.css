@@ -167,6 +167,7 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 
 .square-card {
@@ -733,6 +734,19 @@ pumas
 @media (max-height: 1500px) {
   .logo {
     height: 6%;
+  }
+
+  .square-card {
+    max-height: 28rem;
+  }
+
+  .equipo-wrapper {
+    height: 80vh;
+    align-items: center;
+  }
+
+  .equipo-containter {
+    max-height: 35rem;
   }
 }
 
