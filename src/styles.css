@@ -135,6 +135,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   position: relative;
   height: 100%;
@@ -152,14 +153,6 @@ body {
   text-align: center;
 }
 
-.mountains p:first-child {
-  margin-top: 4rem;
-}
-
-.mountains p:last-child {
-  margin-bottom: 4rem;
-}
-
 .office {
   background: url("../src/assets/images/office.png") no-repeat center center;
   background-size: cover;
@@ -174,7 +167,7 @@ body {
   background-color: var(--square2-color);
   border-radius: 40px;
   width: 50%;
-  height: 55%;
+  height: 65%;
   margin: 8%;
   position: absolute;
 }
@@ -222,7 +215,6 @@ body {
   justify-content: center;
   gap: 4rem;
   padding-left: 3rem;
-  padding-right: 2rem;
   padding-bottom: 2rem;
 }
 
@@ -468,6 +460,8 @@ body {
   height: 100%;
   align-items: flex-start;
   margin: 5%;
+  padding-top: 20%;
+  padding-bottom: 35%;
 }
 
 .met-title {
@@ -766,7 +760,7 @@ pumas
   }
 
   .square-card {
-    width: 70%;
+    width: 75%;
     height: 55%;
   }
 
