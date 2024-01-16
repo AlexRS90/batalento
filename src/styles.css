@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+@font-face {
+  font-family: 'frutiger';
+  src: url("../src/assets/fonts/Frutiger-LT-Std-45-Light_18818.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bar-width: 30px;
   --bar-height: 4px;
@@ -17,7 +24,8 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "frutiger";
+  font-family: -apple-system, BlinkMacSystemFont, "frutiger", sans-serif;
   margin: 0;
 }
 
@@ -399,11 +407,6 @@ body {
   padding: 10% 5% 0 5%;
 }
 
-.team-description-hidden {
-  opacity: 0;
-  transition: opacity 1s 1s ease;
-}
-
 .team-member {
   display: flex;
   align-items: flex-start;
@@ -425,8 +428,6 @@ body {
   justify-content: center;
   gap: 1.5rem;
   align-items: center;
-  opacity: 0;
-  transition: opacity 1s 2s ease;
 }
 
 .ceo-container img {
@@ -446,8 +447,6 @@ body {
   justify-content: center;
   gap: 1rem;
   max-width: 60%;
-  opacity: 0;
-  transition: opacity 1s 2s ease;
 }
 
 .white-space {
@@ -490,12 +489,12 @@ body {
   height: 14em;
   border-radius: 40px;
   background-color: white;
-  opacity: 0;
+  /* opacity: 0;
   animation-duration: 0.5s;
   animation-delay: 0.5s;
   animation-name: appear-in;
   animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 
 .met-card-num {
@@ -761,7 +760,7 @@ pumas
 
   .square-card {
     width: 75%;
-    height: 55%;
+    height: 70%;
   }
 
   .square-wrapper-last {
@@ -778,7 +777,7 @@ pumas
   }
 
   .met-card-wrapper {
-    height: 20em;
+    height: auto;
   }
 }
 
