@@ -143,7 +143,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   position: relative;
   height: 100%;
@@ -153,8 +152,12 @@ body {
 }
 
 .mountains p {
-  width: 70%;
+  width: 55%;
   text-align: center;
+}
+
+.mountains p:first-child {
+  margin-top: 8%;
 }
 
 .ceo-title p {
