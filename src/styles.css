@@ -290,7 +290,7 @@ body {
 }
 
 .card-position-absolute {
-  width: 48%;
+  width: 38%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -343,8 +343,8 @@ body {
 
 .services-info-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   gap: 1rem;
   width: 100%;
   padding-left: 5%;
@@ -358,7 +358,7 @@ body {
 .services-info-wrapper ul {
   padding: 0;
   padding-left: 6%;
-  padding-right: 20%;
+  padding-right: 10%;
 }
 
 .lower-alpha {
@@ -367,6 +367,10 @@ body {
 
 .bullet-points {
   list-style: disc;
+}
+
+.services-bullets-wrapper {
+  margin-top: 3em;
 }
 
 .desktop-arrows {
