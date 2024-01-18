@@ -274,7 +274,7 @@ body {
 
 .services-container {
   display: flex;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   padding-left: 6%;
   background: url("../src/assets/images/servicios.png") no-repeat center center;
@@ -400,6 +400,7 @@ body {
 
 .equipo-containter {
   display: flex;
+  width: 70rem;
   justify-content: center;
   border-radius: 40px 0 0 40px;
   height: 70vh;
@@ -466,15 +467,17 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  align-items: flex-start;
+  align-items: center;
   margin: 5%;
-  padding-top: 20%;
-  padding-bottom: 35%;
 }
 
 .met-title {
   margin-bottom: 5%;
-  margin-left: 5%;
+  align-self: flex-start;
+}
+
+.metodology-wrapper {
+  width: 71em;
 }
 
 .met-cards {
@@ -486,6 +489,7 @@ body {
   padding: 4% 5%;
   border-radius: 40px;
   margin-bottom: 2%;
+  width: 64rem;
 }
 
 .met-card-wrapper {
@@ -495,7 +499,7 @@ body {
   gap: 1rem;
   padding: 2% 5%;
   width: 30%;
-  height: 14em;
+  height: auto;
   border-radius: 40px;
   background-color: white;
   /* opacity: 0;
@@ -554,6 +558,7 @@ body {
   border-radius: 40px;
   padding: 4% 25%;
   text-align: center;
+  width: auto;
 }
 
 .contacto-container {
@@ -752,10 +757,6 @@ pumas
     height: 80vh;
     align-items: center;
   }
-
-  .equipo-containter {
-    max-height: 35rem;
-  }
 }
 
 @media (max-height: 1000px) {
@@ -799,8 +800,16 @@ pumas
     padding-right: 5%;
   }
 
-  .met-card-wrapper {
-    height: auto;
+  .equipo-containter {
+    width: 100%;
+  }
+
+  .metodology-wrapper {
+    width: 90%;
+  }
+
+  .met-cards {
+    width: 90%;
   }
 }
 

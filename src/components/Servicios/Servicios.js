@@ -26,7 +26,7 @@ function Servicios({ language }) {
   }
   window.addEventListener('scroll', reveal);
   return (
-    <section className="services-container parallax-sections" id={setId}>
+    <section className="services-container" id={setId}>
       <div className="services-cards">
         <p className="titulo-secciones">Servicios</p>
         <p className="subtitulo-secciones">Explora nuestros servicios</p>
