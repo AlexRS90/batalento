@@ -275,22 +275,24 @@ body {
 .services-container {
   display: flex;
   height: 100%;
-  justify-content: flex-start;
-  padding-left: 5%;
+  justify-content: center;
+  padding-left: 6%;
   background: url("../src/assets/images/servicios.png") no-repeat center center;
   background-size: 100%;
   background-position: bottom;
-  gap: 16.4rem;
+  position: relative;
 }
 
 .services-cards {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
+  margin-top: 5%;
+  position: absolute;
+  left: 5%;
 }
 
 .card-position-absolute {
-  width: 38%;
+  max-width: 38%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -775,12 +777,16 @@ pumas
   }
 
   .services-container {
-    gap: 9rem;
+    padding-left: 12%;
   }
 
   .services-info-container {
     width: 135%;
-    height: 15rem;
+    height: 12rem;
+  }
+
+  .services-info-wrapper ul {
+    padding-right: 5%;
   }
 
   .met-card-wrapper {
@@ -918,7 +924,6 @@ pumas
     background-position: left;
     background-size: cover;
     height: 58rem;
-    gap: 16rem;
   }
 
   .services-cards {
