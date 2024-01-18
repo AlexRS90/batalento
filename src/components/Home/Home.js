@@ -13,7 +13,7 @@ function Home({ language }) {
   function reveal() {
     const reveals = document.querySelectorAll('.reveal');
     for (let i = 0; i < reveals.length; i++) {/* eslint-disable-line */
-      const windowHeight = window.innerHeight;
+      const windowHeight = window.innerHeight;/* eslint-disable-line */
       const elementTop = reveals[i].getBoundingClientRect().top;
       const elementVisible = 150;
       if (elementTop < windowHeight - elementVisible) {
@@ -42,7 +42,7 @@ function Home({ language }) {
         </p>
       </div>
       <div className="office">
-        <div className="square-card reveal">
+        <div className="square-card revelate">
           <ArrowsNavigation card={card} setCard={setCard} maxCards={maxCards} section="home" />
           <CardEstamosListos currentCard={currentCard} card={card} activeClass={activeClass} />
         </div>

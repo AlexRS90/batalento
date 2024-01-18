@@ -14,7 +14,7 @@ function Servicios({ language }) {
     for (let i = 0; i < reveals.length; i++) { /* eslint-disable-line */
       const windowHeight = window.innerHeight;
       const elementTop = reveals[i].getBoundingClientRect().top;
-      const elementVisible = 500;
+      const elementVisible = 150;
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add('active');
         setActiveClass(true);
