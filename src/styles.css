@@ -499,7 +499,7 @@ body {
   gap: 1rem;
   padding: 2% 5%;
   width: 30%;
-  height: auto;
+  height: 14em;
   border-radius: 40px;
   background-color: white;
   /* opacity: 0;
@@ -810,6 +810,11 @@ pumas
 
   .met-cards {
     width: 90%;
+  }
+
+  .met-card-wrapper {
+    height: auto;
+    max-height: 20em;
   }
 }
 
