@@ -5,28 +5,44 @@ import ArrowsNavigation from '../ArrowsNavigation/ArrowsNavigation';
 
 function Home({ language }) {
   const [card, setCard] = React.useState(0);
-  const [activeClass, setActiveClass] = React.useState(false);
+  const [activeClass, setActiveClass] = React.useState(false);/* eslint-disable-line */
+  // const ref = React.useRef(null);
   const maxCards = OFFICE_CARDS.length - 1;
   const currentCard = OFFICE_CARDS[card];
   const description = language === 'ENGLISH' ? HOME[0] : HOME[1];
+  // const appearOptions = {
+  //   rootMargin: '0px 0px -100px 0px',
+  // };
 
-  function reveal() {
-    const reveals = document.querySelectorAll('.reveal');
-    for (let i = 0; i < reveals.length; i++) {/* eslint-disable-line */
-      const windowHeight = window.innerHeight;/* eslint-disable-line */
-      const elementTop = reveals[i].getBoundingClientRect().top;
-      const elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add('active');
-        setActiveClass(true);
-      } else {
-        reveals[i].classList.remove('active');
-        setActiveClass(false);
-      }
-    }
-  }
+  // React.useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       setIsIntersecting(entry.isIntersecting);
+  //     },
+  //     appearOptions,
+  //   );
+  //   console.log(isIntersecting);
+  //   observer.observe(ref.current);
+  //   return () => observer.disconnect();
+  // }, []);
 
-  window.addEventListener('scroll', reveal);
+  // function reveal() {
+  //   const reveals = document.querySelectorAll('.reveal');
+  //   for (let i = 0; i < reveals.length; i++) {/* eslint-disable-line */
+  //     const windowHeight = window.innerHeight;/* eslint-disable-line */
+  //     const elementTop = reveals[i].getBoundingClientRect().top;
+  //     const elementVisible = 150;
+  //     if (elementTop < windowHeight - elementVisible) {
+  //       reveals[i].classList.add('active');
+  //       setActiveClass(true);
+  //     } else {
+  //       reveals[i].classList.remove('active');
+  //       setActiveClass(false);
+  //     }
+  //   }
+  // }
+
+  // window.addEventListener('scroll', reveal);
 
   return (
     <div className="home-wrapper parallax-wrapper">

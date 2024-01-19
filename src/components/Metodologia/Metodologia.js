@@ -12,11 +12,11 @@ function Metodologia({ language }) {
 
   return (
     <section className="met-container" id={setId}>
-      <div className="met-title">
-        <p className="titulo-secciones">{title}</p>
-        <p className="subtitulo-secciones">{subtitle}</p>
-      </div>
       <div className="metodology-wrapper">
+        <div className="met-title">
+          <p className="titulo-secciones">{title}</p>
+          <p className="subtitulo-secciones">{subtitle}</p>
+        </div>
         <div className="met-cards">
           {cards.map(({ id, title, info }) => (
             <div className="met-card-wrapper" key={Math.random()}>

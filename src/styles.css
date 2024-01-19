@@ -243,7 +243,7 @@ body {
   scale: 0.8;
   opacity: 0;
   animation: fade-in linear forwards;
-  animation-timeline: view();
+  animation-timeline: view() !important;
   animation-range: 400px 500px;
 }
 
@@ -257,7 +257,7 @@ body {
   scale: 0.8;
   opacity: 0;
   animation: fade-in linear forwards;
-  animation-timeline: view();
+  animation-timeline: view() !important;
   animation-range: 500px 550px;
   /* transition: opacity 1s 2s ease; */
 }
@@ -285,7 +285,7 @@ body {
   scale: 0.8;
   opacity: 0;
   animation: fade-in linear forwards;
-  animation-timeline: view();
+  animation-timeline: view() !important;
   animation-range: 250px 350px;
 }
 
@@ -494,6 +494,7 @@ body {
 
 .met-title {
   margin-bottom: 5%;
+  padding-left: 6%;
   align-self: flex-start;
 }
 
@@ -763,6 +764,14 @@ pumas
   .logo {
     height: 4%;
   }
+
+  .square-card {
+    max-height: 28rem;
+  }
+
+  .equipo-containter {
+    height: 33em;
+  }
 }
 
 @media (max-height: 1500px) {
@@ -774,6 +783,10 @@ pumas
     max-height: 28rem;
   }
 
+  .equipo-containter {
+    height: 33em;
+  }
+
   .equipo-wrapper {
     height: 80vh;
     align-items: center;
@@ -783,6 +796,10 @@ pumas
 @media (max-height: 1000px) {
   .logo {
     height: 10%;
+  }
+
+  .equipo-containter {
+    height: 30em;
   }
 }
 
@@ -826,7 +843,7 @@ pumas
   }
 
   .metodology-wrapper {
-    width: 90%;
+    width: 100%;
   }
 
   .met-cards {
