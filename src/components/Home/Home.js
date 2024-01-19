@@ -21,7 +21,6 @@ function Home({ language }) {
       },
       appearOptions,
     );
-    console.log(activeClass);
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, [activeClass]);
@@ -33,24 +32,6 @@ function Home({ language }) {
       ref.current.classList.remove('appear-on-scroll');
     }
   }, [activeClass]);
-
-  // function reveal() {
-  //   const reveals = document.querySelectorAll('.reveal');
-  //   for (let i = 0; i < reveals.length; i++) {/* eslint-disable-line */
-  //     const windowHeight = window.innerHeight;/* eslint-disable-line */
-  //     const elementTop = reveals[i].getBoundingClientRect().top;
-  //     const elementVisible = 150;
-  //     if (elementTop < windowHeight - elementVisible) {
-  //       reveals[i].classList.add('active');
-  //       setActiveClass(true);
-  //     } else {
-  //       reveals[i].classList.remove('active');
-  //       setActiveClass(false);
-  //     }
-  //   }
-  // }
-
-  // window.addEventListener('scroll', reveal);
 
   return (
     <div className="home-wrapper parallax-wrapper">

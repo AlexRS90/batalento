@@ -277,17 +277,6 @@ body {
   gap: 6px;
 }
 
-/* .revelate {
-  opacity: 0;
-  animation: fade-in ease forwards;
-  animation-timeline: view() !important;
-  animation-range: entry;
-} */
-
-/* @keyframes fade-in {
-  to {opacity: 1;}
-} */
-
 .services-container {
   display: flex;
   height: 100vh;
@@ -420,6 +409,8 @@ body {
   justify-content: center;
   border-radius: 40px 0 0 40px;
   height: 70vh;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease;
 }
 
 .team-description {
@@ -431,6 +422,11 @@ body {
   background-color: var(--square1-color);
   border-radius: 40px 0 0 40px;
   padding: 10% 5% 0 5%;
+}
+
+.appear-team-title {
+  opacity: 0;
+  transition: opacity 0.5s 0.8s ease;
 }
 
 .team-member {
@@ -454,6 +450,8 @@ body {
   justify-content: center;
   gap: 1.5rem;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s 1.1s ease;
 }
 
 .ceo-container img {
@@ -473,6 +471,8 @@ body {
   justify-content: center;
   gap: 1rem;
   max-width: 60%;
+  opacity: 0;
+  transition: opacity 0.5s 1.1s ease;
 }
 
 .white-space {
@@ -507,6 +507,8 @@ body {
   border-radius: 40px;
   margin-bottom: 2%;
   width: 64rem;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease;
 }
 
 .met-card-wrapper {
@@ -519,12 +521,12 @@ body {
   height: 14em;
   border-radius: 40px;
   background-color: white;
-  /* opacity: 0;
+  opacity: 0;
   animation-duration: 0.5s;
   animation-delay: 0.5s;
   animation-name: appear-in;
   animation-timing-function: ease;
-  animation-fill-mode: forwards; */
+  animation-fill-mode: forwards;
 }
 
 .met-card-num {
@@ -546,19 +548,19 @@ body {
 }
 
 .reveal-card-1 {
-  animation-delay: 0.5s;
+  animation-delay: 0.8s;
 }
 
 .reveal-card-2 {
-  animation-delay: 1s;
+  animation-delay: 1.1s;
 }
 
 .reveal-card-3 {
-  animation-delay: 1.5s;
+  animation-delay: 1.4s;
 }
 
 .reveal-card-4 {
-  animation-delay: 2s;
+  animation-delay: 1.7s;
 }
 
 @keyframes appear-in {
