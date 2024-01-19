@@ -240,9 +240,8 @@ body {
 .title-card-hidden {
   /* opacity: 0;
   transition: opacity 1s 1s ease; */
-  scale: 0.8;
   opacity: 0;
-  animation: fade-in linear forwards;
+  animation: fade-in ease forwards;
   animation-timeline: view() !important;
   animation-range: 400px 500px;
 }
@@ -254,9 +253,8 @@ body {
   gap: 2rem;
   margin: 0;
   padding-right: 5rem;
-  scale: 0.8;
   opacity: 0;
-  animation: fade-in linear forwards;
+  animation: fade-in ease forwards;
   animation-timeline: view() !important;
   animation-range: 500px 550px;
   /* transition: opacity 1s 2s ease; */
@@ -282,15 +280,14 @@ body {
 }
 
 .revelate {
-  scale: 0.8;
   opacity: 0;
-  animation: fade-in linear forwards;
+  animation: fade-in ease forwards;
   animation-timeline: view() !important;
-  animation-range: 250px 350px;
+  animation-range: entry;
 }
 
 @keyframes fade-in {
-  to {scale: 1; opacity: 1;}
+  to {opacity: 1;}
 }
 
 .services-container {
@@ -361,7 +358,7 @@ body {
 
 .services-img {
   opacity: 0;
-  transition: opacity 1s 1s ease;
+  transition: opacity 0.5s 0.5s ease;
 }
 
 .services-info-wrapper {
@@ -375,7 +372,7 @@ body {
 
 .services-info {
   opacity: 0;
-  transition: opacity 1s 2s ease;
+  transition: opacity 0.5s 0.8s ease;
 }
 
 .services-info-wrapper ul {
