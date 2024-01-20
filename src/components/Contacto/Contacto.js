@@ -10,8 +10,8 @@ function Contacto({ language }) {
         <p className="subtitulo-secciones">Escríbenos y nos pondremos en contacto a la brevedad.</p>
       </div>
       <div className="forms-wrapper">
-        <Formulario empleo="Aspirante" />
-        <Formulario empleo="Reclutador" />
+        <Formulario contacto="Candidatos" />
+        <Formulario contacto="Clientes" />
       </div>
       <a
         href="https://www.linkedin.com/company/abril-barrientos-talent-expert/jobs/?viewAsMember=true"
