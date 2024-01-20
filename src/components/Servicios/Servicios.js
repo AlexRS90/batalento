@@ -4,34 +4,41 @@ import ArrowsNavigation from '../ArrowsNavigation/ArrowsNavigation';
 
 function Servicios({ language }) {
   const [card, setCard] = React.useState(0);
+  const ref = React.useRef(null);
   const [activeClass, setActiveClass] = React.useState(false);
   const hiddenDelay = activeClass ? 'service-img active' : 'service-img hidden';
   const maxCards = SERVICES_CARDS.length - 1;
   const setId = language === 'ESPAÑOL' ? 'services' : 'servicios';
+  const appearOptions = {
+    rootMargin: '0px 0px -100px 0px',
+  };
 
-  function reveal() {
-    const reveals = document.querySelectorAll('.reveal-services');
-    for (let i = 0; i < reveals.length; i++) { /* eslint-disable-line */
-      const windowHeight = window.innerHeight;
-      const elementTop = reveals[i].getBoundingClientRect().top;
-      const elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add('active');
-        setActiveClass(true);
-      } else {
-        reveals[i].classList.remove('active');
-        setActiveClass(false);
-      }
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setActiveClass(entry.isIntersecting);
+      },
+      appearOptions,
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [activeClass]);
+
+  React.useEffect(() => {
+    if (activeClass) {
+      ref.current.classList.add('active');
+    } else {
+      ref.current.classList.remove('active');
     }
-  }
-  window.addEventListener('scroll', reveal);
+  }, [activeClass]);
+
   return (
     <section className="services-container" id={setId}>
       <div className="services-cards">
         <p className="titulo-secciones">Servicios</p>
         <p className="subtitulo-secciones">Explora nuestros servicios</p>
       </div>
-      <div className="card-position-absolute reveal-services">
+      <div className="card-position-absolute" ref={ref}>
         <div className="services-info-container">
           <div className="services-img-container">
             <div className="mobil-arrows">
@@ -59,7 +66,7 @@ function Servicios({ language }) {
               <a
                 href="https://www.google.com"
                 target="_blank"
-                className="primary-button mobil-service-button"
+                className={`primary-button mobil-service-button ${hiddenDelay}`}
                 rel="noreferrer"
               >
                 VER MÁS
