@@ -19,6 +19,10 @@
   --square2-color: #f3f3f3;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -279,30 +283,34 @@ body {
 
 .services-container {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
-  padding-left: 6%;
+  align-items: center;
   background: url("../src/assets/images/servicios.png") no-repeat center center;
   background-size: 100%;
   background-position: bottom;
-  position: relative;
+  overflow-x: hidden;
+}
+
+.services-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 45%;
+  max-width: 50em;
 }
 
 .services-cards {
   display: flex;
   flex-direction: column;
-  margin-top: 5%;
-  position: absolute;
-  left: 5%;
 }
 
 .card-position-absolute {
-  width: 38%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: flex-end;
-  align-self: center;
   opacity: 0;
   transition: opacity 0.5s 0.5s ease;
 }
@@ -329,7 +337,8 @@ body {
   background-color: white;
   border-radius: 40px;
   justify-content: flex-start;
-  width: 115%;
+  align-self: center;
+  width: 100%;
 }
 
 .services-img-container {
@@ -739,13 +748,12 @@ pumas
 pumas
 pumas
 
-*/
 
 @media screen and (min-width: 1500px) {
-  .card-position-absolute {
-    max-width: 35em;
-  }
+
 }
+
+*/
 
 @media (max-height: 2000px) {
   .logo {
@@ -808,17 +816,9 @@ pumas
     gap: 6rem;
   }
 
-  .card-position-absolute {
-    width: 52%;
-  }
-
-  .services-container {
-    padding-left: 12%;
-  }
-
   .services-info-container {
-    width: 135%;
-    height: 12rem;
+    width: 100%;
+    height: 13rem;
   }
 
   .services-info-wrapper ul {
@@ -848,8 +848,8 @@ pumas
     height: 36em;
   }
 
-  .card-position-absolute {
-    width: 65%;
+  .services-info-container {
+    height: 16rem;
   }
 }
 
@@ -980,21 +980,24 @@ pumas
 
   .services-container {
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     gap: 18em;
     background-position: left;
     background-size: cover;
     height: 54rem;
   }
 
+  .services-wrapper {
+    gap: 18em;
+    width: 80%;
+  }
+
   .services-cards {
     background-position: bottom;
     position: static;
-    margin-top: 10%;
   }
 
   .card-position-absolute {
-    width: 90%;
     align-items: baseline;
     margin-top: 3rem;
     gap: unset;
@@ -1003,7 +1006,6 @@ pumas
   .services-info-container {
     flex-direction: column;
     justify-content: end;
-    width: 90%;
     height: 20rem;
     border-radius: 0 0 40px 40px;
   }
