@@ -409,6 +409,8 @@ body {
 
 .equipo-wrapper {
   background-color: var(--square2-color);
+  background: url("../src/assets/images/equipo.png") no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   padding: 10% 5%;
@@ -491,11 +493,13 @@ body {
 }
 
 .met-container {
+  background: url("../src/assets/images/metodologia.png") no-repeat center center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100%;
   align-items: center;
-  margin: 5%;
+  padding: 5%;
 }
 
 .met-title {
@@ -1113,19 +1117,21 @@ pumas
     width: auto;
     height: 15em;
     padding: 10% 10% 0 10%;
-    border-radius: 0;
+    border-radius: 40px;
   }
 
   .met-card-wrapper:first-child {
     padding-bottom: 10%;
   }
 
-  .met-card-wrapper:last-child {
-    height: 12em;
-  }
-
   .met-card-wrapper:nth-child(even) {
     background-color: var(--square1-color);
+    border-radius: 0;
+  }
+
+  .met-card-wrapper:last-child {
+    height: 12em;
+    border-radius: 0 0 40px 40px;
   }
 
   .met-cierre {
