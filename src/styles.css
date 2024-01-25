@@ -400,7 +400,8 @@ body {
 }
 
 .desktop-service-button {
-  display: block;
+  /* display: block; */
+  display: none;
 }
 
 .mobil-service-button {
@@ -1052,7 +1053,8 @@ pumas
   }
 
   .mobil-service-button {
-    display: block;
+    /* display: block; */
+    display: none;
     align-self: flex-end;
     margin-right: 4rem;
     opacity: 0;
