@@ -28,7 +28,6 @@ html {
 }
 
 body {
-  font-family: "frutiger";
   font-family: -apple-system, BlinkMacSystemFont, "frutiger", sans-serif;
   margin: 0;
 }
@@ -160,12 +159,12 @@ body {
   text-align: center;
 }
 
-.mountains p:first-child {
-  margin-top: 8%;
-}
-
 .ceo-title p {
   text-align: center;
+}
+
+.mountains p:first-child {
+  margin-top: 8%;
 }
 
 .office {
@@ -407,7 +406,6 @@ body {
 }
 
 .equipo-wrapper {
-  background-color: var(--square2-color);
   background: url("../src/assets/images/equipo.png") no-repeat center center;
   background-size: cover;
   display: flex;
@@ -581,6 +579,7 @@ body {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -750,7 +749,6 @@ pumas
 pumas
 pumas
 pumas
-
 
 @media screen and (min-width: 1500px) {
 
