@@ -4,14 +4,14 @@ import Formulario from '../Formulario/Formulario';
 function Contacto({ language }) {
   const setId = language === 'ESPAÑOL' ? 'contact' : 'contacto';
   return (
-    <section className="contacto-container np-parallax" id={setId}>
+    <section className="contacto-container" id={setId}>
       <div className="contacto-titulo">
         <p className="titulo-secciones">Contacto</p>
         <p className="subtitulo-secciones">Escríbenos y nos pondremos en contacto a la brevedad.</p>
       </div>
       <div className="forms-wrapper">
-        <Formulario empleo="Aspirante" />
-        <Formulario empleo="Reclutador" />
+        <Formulario contacto="Candidatos" />
+        <Formulario contacto="Clientes" />
       </div>
       <a
         href="https://www.linkedin.com/company/abril-barrientos-talent-expert/jobs/?viewAsMember=true"

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+@font-face {
+  font-family: 'frutiger';
+  src: url("../src/assets/fonts/Frutiger-LT-Std-45-Light_18818.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bar-width: 30px;
   --bar-height: 4px;
@@ -12,12 +19,16 @@
   --square2-color: #f3f3f3;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "frutiger", sans-serif;
   margin: 0;
 }
 
@@ -131,15 +142,20 @@ body {
 .mountains {
   background: url("../src/assets/images/mountains.png") no-repeat center center;
   background-size: cover;
-  min-height: 60vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+  transform: translateZ(-6px) scale(1.6);
 }
 
 .mountains p {
-  width: 70%;
+  width: 55%;
   text-align: center;
 }
 
@@ -148,29 +164,32 @@ body {
 }
 
 .mountains p:first-child {
-  margin-top: 4rem;
-}
-
-.mountains p:last-child {
-  margin-bottom: 4rem;
+  margin-top: 8%;
 }
 
 .office {
   background: url("../src/assets/images/office.png") no-repeat center center;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 
 .square-card {
   background-color: var(--square2-color);
   border-radius: 40px;
   width: 50%;
-  height: 50%;
+  height: 65%;
   margin: 8%;
   position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease;
+}
+
+.appear-on-scroll {
+  opacity: 1;
 }
 
 .arrow-buttons {
@@ -216,7 +235,6 @@ body {
   justify-content: center;
   gap: 4rem;
   padding-left: 3rem;
-  padding-right: 2rem;
   padding-bottom: 2rem;
 }
 
@@ -228,6 +246,11 @@ body {
   width: 30%;
 }
 
+.title-card-hidden {
+  opacity: 0;
+  transition: opacity 0.5s 0.8s ease;
+}
+
 .bullet-container {
   display: flex;
   flex-direction: column;
@@ -235,6 +258,7 @@ body {
   gap: 2rem;
   margin: 0;
   padding-right: 5rem;
+  transition: opacity 0.5s 1.1s ease;
 }
 
 .card-text {
@@ -258,28 +282,34 @@ body {
 
 .services-container {
   display: flex;
-  height: 90vh;
-  justify-content: flex-start;
-  padding-left: 5%;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   background: url("../src/assets/images/servicios.png") no-repeat center center;
-  background-size: 100%;
-  background-position: bottom;
-  gap: 11rem;
+  overflow-x: hidden;
+}
+
+.services-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 45%;
+  max-width: 50em;
 }
 
 .services-cards {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
 }
 
 .card-position-absolute {
-  width: 48%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: flex-end;
-  align-self: center;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease;
 }
 
 .primary-button {
@@ -304,7 +334,8 @@ body {
   background-color: white;
   border-radius: 40px;
   justify-content: flex-start;
-  width: 115%;
+  align-self: center;
+  width: 100%;
 }
 
 .services-img-container {
@@ -320,19 +351,29 @@ body {
   max-width: 90%;
 }
 
+.services-img {
+  opacity: 0;
+  transition: opacity 0.5s 0.8s ease;
+}
+
 .services-info-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   gap: 1rem;
   width: 100%;
   padding-left: 5%;
 }
 
+.services-info {
+  opacity: 0;
+  transition: opacity 0.5s 1.1s ease;
+}
+
 .services-info-wrapper ul {
   padding: 0;
   padding-left: 6%;
-  padding-right: 20%;
+  padding-right: 9%;
 }
 
 .lower-alpha {
@@ -341,6 +382,10 @@ body {
 
 .bullet-points {
   list-style: disc;
+}
+
+.services-bullets-wrapper {
+  margin-top: 3em;
 }
 
 .desktop-arrows {
@@ -352,7 +397,8 @@ body {
 }
 
 .desktop-service-button {
-  display: block;
+  /* display: block; */
+  display: none;
 }
 
 .mobil-service-button {
@@ -360,7 +406,8 @@ body {
 }
 
 .equipo-wrapper {
-  background-color: var(--square2-color);
+  background: url("../src/assets/images/equipo.png") no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   padding: 10% 5%;
@@ -368,9 +415,12 @@ body {
 
 .equipo-containter {
   display: flex;
+  width: 70rem;
   justify-content: center;
   border-radius: 40px 0 0 40px;
   height: 70vh;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease;
 }
 
 .team-description {
@@ -384,6 +434,11 @@ body {
   padding: 10% 5% 0 5%;
 }
 
+.appear-team-title {
+  opacity: 0;
+  transition: opacity 0.5s 0.8s ease;
+}
+
 .team-member {
   display: flex;
   align-items: flex-start;
@@ -394,12 +449,19 @@ body {
   padding: 10% 5% 0 5%;
 }
 
+.team-member-hidden {
+  opacity: 0;
+  transition: opacity 1s 2s ease;
+}
+
 .ceo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s 1.1s ease;
 }
 
 .ceo-container img {
@@ -419,6 +481,8 @@ body {
   justify-content: center;
   gap: 1rem;
   max-width: 60%;
+  opacity: 0;
+  transition: opacity 0.5s 1.1s ease;
 }
 
 .white-space {
@@ -426,15 +490,23 @@ body {
 }
 
 .met-container {
+  background: url("../src/assets/images/metodologia.png") no-repeat center center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 5%;
+  height: 100%;
+  align-items: center;
+  padding: 5%;
 }
 
 .met-title {
   margin-bottom: 5%;
-  margin-left: 5%;
+  padding-left: 6%;
+  align-self: flex-start;
+}
+
+.metodology-wrapper {
+  width: 71em;
 }
 
 .met-cards {
@@ -446,6 +518,9 @@ body {
   padding: 4% 5%;
   border-radius: 40px;
   margin-bottom: 2%;
+  width: 64rem;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease;
 }
 
 .met-card-wrapper {
@@ -458,6 +533,12 @@ body {
   height: 14em;
   border-radius: 40px;
   background-color: white;
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-name: appear-in;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .met-card-num {
@@ -474,7 +555,34 @@ body {
   list-style: disc;
   padding: 0;
   padding-right: 10%;
+  padding-left: 14px;
   margin: 0;
+}
+
+.reveal-card-1 {
+  animation-delay: 0.8s;
+}
+
+.reveal-card-2 {
+  animation-delay: 1.1s;
+}
+
+.reveal-card-3 {
+  animation-delay: 1.4s;
+}
+
+.reveal-card-4 {
+  animation-delay: 1.7s;
+}
+
+@keyframes appear-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .met-cierre {
@@ -482,13 +590,15 @@ body {
   border-radius: 40px;
   padding: 4% 25%;
   text-align: center;
+  width: auto;
 }
 
 .contacto-container {
   display: flex;
   flex-direction: column;
-  margin: 5%;
+  padding: 5%;
   align-items: flex-start;
+  background-color: var(--square2-color);
 }
 
 .contacto-container a {
@@ -558,6 +668,14 @@ body {
   margin: 0;
   text-align: center;
   border-radius: 10px;
+  transform: translateX(150%);
+  opacity: 0;
+  transition: all 0.5s 0.5s ease;
+}
+
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .secondary-button {
@@ -602,13 +720,39 @@ body {
   gap: 0.5rem;
 }
 
-/* Media query
+.active {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.parallax-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.parallax-sections {
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -1;
+  transform: translateZ(-10px) scale(2);
+}
+
+/* Media queries
 
 pumas
 pumas
 pumas
 pumas
 pumas
+
+@media screen and (min-width: 1500px) {
+
+}
 
 */
 
@@ -616,17 +760,42 @@ pumas
   .logo {
     height: 4%;
   }
+
+  .square-card {
+    max-height: 28rem;
+  }
+
+  .equipo-containter {
+    height: 33em;
+  }
 }
 
 @media (max-height: 1500px) {
   .logo {
     height: 6%;
   }
+
+  .square-card {
+    max-height: 28rem;
+  }
+
+  .equipo-containter {
+    height: 33em;
+  }
+
+  .equipo-wrapper {
+    height: 80vh;
+    align-items: center;
+  }
 }
 
 @media (max-height: 1000px) {
   .logo {
     height: 10%;
+  }
+
+  .equipo-containter {
+    height: 30em;
   }
 }
 
@@ -640,34 +809,52 @@ pumas
   }
 
   .square-card {
-    width: 70%;
-    height: 55%;
+    width: 75%;
+    height: 70%;
   }
 
   .square-wrapper-last {
     gap: 6rem;
   }
 
-  .services-container {
-    gap: 9rem;
+  .services-info-container {
+    width: 100%;
+    height: 13rem;
   }
 
-  .services-info-container {
-    width: 135%;
-    height: 15rem;
+  .services-info-wrapper ul {
+    padding-right: 5%;
+  }
+
+  .equipo-containter {
+    width: 100%;
+  }
+
+  .metodology-wrapper {
+    width: 100%;
+  }
+
+  .met-cards {
+    width: 90%;
   }
 
   .met-card-wrapper {
-    height: 20em;
+    height: auto;
+    max-height: 20em;
+  }
+}
+
+@media (max-width: 900px) {
+  .equipo-containter {
+    height: 36em;
+  }
+
+  .services-info-container {
+    height: 16rem;
   }
 }
 
 @media (max-width: 750px) {
-  /* html {
-    background: url("../src/assets/images/movile-welcome.jpg") no-repeat center center fixed;
-    background-size: 95%;
-  } */
-
   .toggle-inLine {
     display: none;
   }
@@ -747,6 +934,7 @@ pumas
     background-color: var(--square2-color);
     width: 100%;
     height: 100vh;
+    z-index: 1;
   }
 
   .show-menu {
@@ -756,6 +944,10 @@ pumas
     padding-left: 1rem;
     gap: 0.5rem;
     position: absolute;
+  }
+
+  .office {
+    min-height: 115vh;
   }
 
   .card-text {
@@ -768,11 +960,15 @@ pumas
 
   .square-card {
     position: relative;
-    max-width: 80%;
+    width: 85%;
+    height: fit-content;/* stylelint-disable-line */
+    max-height: 44em;
   }
 
   .square-wrapper {
     flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .arrow-button {
@@ -786,27 +982,31 @@ pumas
 
   .services-container {
     flex-direction: column;
-    background-position: left;
+    justify-content: center;
+    gap: 18em;
     background-size: cover;
-    height: 58rem;
-    gap: 16rem;
+    height: 54rem;
+  }
+
+  .services-wrapper {
+    gap: 18em;
+    width: 80%;
   }
 
   .services-cards {
     background-position: bottom;
+    position: static;
   }
 
   .card-position-absolute {
-    width: 90%;
     align-items: baseline;
-    margin-top: 6rem;
+    margin-top: 3rem;
     gap: unset;
   }
 
   .services-info-container {
     flex-direction: column;
     justify-content: end;
-    width: 90%;
     height: 20rem;
     border-radius: 0 0 40px 40px;
   }
@@ -818,15 +1018,20 @@ pumas
 
   .services-info-wrapper {
     padding-left: 10%;
+    flex-direction: column-reverse;
     width: auto;
-    padding-top: 3rem;
     padding-bottom: 6rem;
   }
 
   .services-bullets-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 2em;
     height: 10rem;
+  }
+
+  .primary-button {
+    padding: 2% 10%;
   }
 
   .desktop-arrows {
@@ -843,13 +1048,22 @@ pumas
   }
 
   .mobil-service-button {
-    display: block;
+    /* display: block; */
+    display: none;
     align-self: flex-end;
     margin-right: 4rem;
+    opacity: 0;
+    transition: opacity 0.5s 1.1s ease;
+  }
+
+  .active {
+    opacity: 1;
   }
 
   .equipo-wrapper {
-    padding: 20% 10%;
+    padding: 15% 10%;
+    height: fit-content;/* stylelint-disable-line */
+    max-height: 165vh;
   }
 
   .equipo-containter {
@@ -893,25 +1107,28 @@ pumas
     background-color: white;
     gap: 0;
     padding: 0;
+    width: 100%;
   }
 
   .met-card-wrapper {
     width: auto;
     height: 15em;
     padding: 10% 10% 0 10%;
-    border-radius: 0;
+    border-radius: 40px;
   }
 
   .met-card-wrapper:first-child {
     padding-bottom: 10%;
   }
 
-  .met-card-wrapper:last-child {
-    height: 12em;
-  }
-
   .met-card-wrapper:nth-child(even) {
     background-color: var(--square1-color);
+    border-radius: 0;
+  }
+
+  .met-card-wrapper:last-child {
+    height: 12em;
+    border-radius: 0 0 40px 40px;
   }
 
   .met-cierre {

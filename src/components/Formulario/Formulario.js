@@ -1,38 +1,40 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
-function Formulario({ empleo }) {
-  const [flash, setFlash] = React.useState(false);
+function Formulario({ contacto }) {
   const [firstName, setFirstName] = React.useState('');
   const [lastName, setLastName] = React.useState('');
   const [mobilNumber, setMobileNumber] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [textArea, setTextArea] = React.useState('');
-  const [state, handleSubmit] = useForm(empleo === 'Aspirante' ? 'xvoepwwk' : 'xvoepwyg');
+  const [state, handleSubmit] = useForm(contacto === 'Candidatos' ? 'xvoepwwk' : 'xvoepwyg');
+  const ref = React.useRef(null);
 
   React.useEffect(() => {
     if (state.succeeded) {
-      setFlash(true);
+      ref.current.classList.add('slide-in');
       setFirstName('');
       setLastName('');
       setMobileNumber('');
       setEmail('');
       setTextArea('');
     }
-  });
+  }, [state.succeeded]);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setFlash(false);
-    });
-  }, [flash]);
+    if (state.submitting === false) {
+      setTimeout(() => {
+        ref.current.classList.remove('slide-in');
+      }, 4000);
+    }
+  }, [state.submitting]);
 
   return (
     <form
       className="form-container"
       onSubmit={handleSubmit}
     >
-      <p className="titulo-form">{empleo === 'Aspirante' ? 'Candidatos' : 'Clientes'}</p>
+      <p className="titulo-form">{contacto === 'Candidatos' ? 'Candidatos' : 'Clientes'}</p>
       <div className="form-row">
         <div className="form-column">
           <label htmlFor="first-name" className="titulo-texto">
@@ -122,7 +124,7 @@ function Formulario({ empleo }) {
       </div>
       <div className="form-column">
         <label htmlFor="expertice" className="titulo-texto">
-          {empleo === 'Aspirante' ? 'Áreas de Experiencia' : 'Mensaje'}
+          {contacto === 'Candidatos' ? 'Áreas de Experiencia' : 'Mensaje'}
           {' '}
           <span>(requerido)</span>
         </label>
@@ -152,8 +154,7 @@ function Formulario({ empleo }) {
         >
           Enviar
         </button>
-        {flash
-          && <p className="form-submition">Envío exitoso</p>}
+        <p className="form-submition" ref={ref}>Envío exitoso</p>
       </div>
     </form>
   );
