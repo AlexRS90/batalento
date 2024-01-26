@@ -288,8 +288,6 @@ body {
   justify-content: center;
   align-items: center;
   background: url("../src/assets/images/servicios.png") no-repeat center center;
-  background-size: 100%;
-  background-position: bottom;
   overflow-x: hidden;
 }
 
@@ -988,7 +986,6 @@ pumas
     flex-direction: column;
     justify-content: center;
     gap: 18em;
-    background-position: left;
     background-size: cover;
     height: 54rem;
   }
