@@ -938,7 +938,6 @@ pumas
     height: 26px;
     border: none;
     cursor: pointer;
-    background-color: aqua;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1030,7 +1029,7 @@ pumas
   }
 
   .services-wrapper {
-    gap: 18em;
+    gap: 16em;
     width: 80%;
   }
 
