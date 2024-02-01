@@ -294,7 +294,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  width: 45%;
+  width: 55%;
   max-width: 50em;
 }
 
@@ -824,6 +824,7 @@ pumas
 
   .services-info-wrapper ul {
     padding-right: 5%;
+    padding-left: 5%;
   }
 
   .equipo-containter {
@@ -934,20 +935,34 @@ pumas
     background-color: var(--square2-color);
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
     z-index: 1;
   }
 
   .show-menu {
     flex-direction: column;
-    margin-top: 50%;
-    margin-bottom: 50%;
-    padding-left: 1rem;
+    margin-top: 25%;
     gap: 0.5rem;
     position: absolute;
   }
 
+  .mountains {
+    background: url("../src/assets/images/Home-vert.png") no-repeat center center;
+    background-size: cover;
+  }
+
+  .mountains p {
+    width: 80%;
+    text-align: justify;
+  }
+
+  .mountains p:first-child {
+    margin-top: 16%;
+  }
+
   .office {
-    min-height: 115vh;
+    min-height: 150vh;
   }
 
   .card-text {
@@ -962,13 +977,14 @@ pumas
     position: relative;
     width: 85%;
     height: fit-content;/* stylelint-disable-line */
-    max-height: 44em;
+    max-height: 60em;
   }
 
   .square-wrapper {
     flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 3rem;
   }
 
   .arrow-button {
@@ -1014,6 +1030,10 @@ pumas
   .services-img-container {
     border-radius: 40px 40px 0 0;
     flex-direction: column;
+  }
+
+  .services-img-container img {
+    max-width: 50%;
   }
 
   .services-info-wrapper {
@@ -1063,7 +1083,7 @@ pumas
   .equipo-wrapper {
     padding: 15% 10%;
     height: fit-content;/* stylelint-disable-line */
-    max-height: 165vh;
+    max-height: 175vh;
   }
 
   .equipo-containter {
@@ -1078,7 +1098,11 @@ pumas
     max-width: unset;
     border-radius: 40px;
     background-color: white;
-    padding: 20% 10%;
+    padding: 20% 15%;
+  }
+
+  .appear-team-title p:first-child {
+    margin-bottom: 2rem;
   }
 
   .team-member {
@@ -1098,7 +1122,8 @@ pumas
   }
 
   .met-title {
-    margin: 10% 0 10% 15%;
+    margin: 10% 0 10% 10%;
+    padding-left: 0;
   }
 
   .met-cards {
@@ -1108,6 +1133,7 @@ pumas
     gap: 0;
     padding: 0;
     width: 100%;
+    margin-bottom: 0;
   }
 
   .met-card-wrapper {
@@ -1128,12 +1154,12 @@ pumas
 
   .met-card-wrapper:last-child {
     height: 12em;
-    border-radius: 0 0 40px 40px;
   }
 
   .met-cierre {
-    padding: 20%;
+    padding: 10%;
     background-color: white;
+    border-radius: 0 0 40px 40px;
   }
 
   .form-container {
