@@ -934,20 +934,22 @@ pumas
 
   .flags {
     display: block;
-    width: 80px;
-    height: 54px;
+    width: 48px;
+    height: 26px;
     border: none;
     cursor: pointer;
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .us-flag {
     background-image: url("../src/assets/images/us-flag.png");
-    background-size: cover;
   }
 
   .mexico-flag {
     background-image: url("../src/assets/images/mexico-flag.png");
-    background-size: cover;
   }
 
   .nav-links {
