@@ -124,6 +124,7 @@ body {
 }
 
 .language {
+  display: block;
   width: auto;
   height: fit-content; /* stylelint-disable-line */
   font-family: 'Abel', sans-serif;
@@ -132,6 +133,10 @@ body {
   background-color: transparent;
   color: var(--general-text-color);
   cursor: pointer;
+}
+
+.flags {
+  display: none;
 }
 
 .home-wrapper {
@@ -924,7 +929,25 @@ pumas
   }
 
   .language {
-    align-self: flex-end;
+    display: none;
+  }
+
+  .flags {
+    display: block;
+    width: 80px;
+    height: 54px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .us-flag {
+    background-image: url("../src/assets/images/us-flag.png");
+    background-size: cover;
+  }
+
+  .mexico-flag {
+    background-image: url("../src/assets/images/mexico-flag.png");
+    background-size: cover;
   }
 
   .nav-links {
