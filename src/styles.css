@@ -935,7 +935,7 @@ pumas
   .flags {
     display: block;
     width: 48px;
-    height: 26px;
+    height: 21px;
     border: none;
     cursor: pointer;
     background-size: cover;
@@ -1025,11 +1025,15 @@ pumas
     justify-content: center;
     gap: 18em;
     background-size: cover;
-    height: 54rem;
+    /* height: 54rem;
+    propiedad con boton VER MAS */
+    height: 50rem;
   }
 
   .services-wrapper {
-    gap: 16em;
+    /* gap: 16em;
+    Propiedad con boton VER MAS */
+    gap: 10em;
     width: 80%;
   }
 
@@ -1054,17 +1058,22 @@ pumas
   .services-img-container {
     border-radius: 40px 40px 0 0;
     flex-direction: column;
+    padding: 0;
+    justify-content: flex-start;
   }
 
   .services-img-container img {
-    max-width: 50%;
+    max-width: 55%;
+    max-height: 55%;
   }
 
   .services-info-wrapper {
     padding-left: 10%;
     flex-direction: column-reverse;
     width: auto;
-    padding-bottom: 6rem;
+    /* padding-bottom: 6rem;
+    Padding con voton ver mas activo */
+    padding-bottom: 3rem;
   }
 
   .services-bullets-wrapper {
@@ -1105,7 +1114,7 @@ pumas
   }
 
   .equipo-wrapper {
-    padding: 15% 10%;
+    padding: 25% 10%;
     height: fit-content;/* stylelint-disable-line */
     max-height: 175vh;
   }
@@ -1143,6 +1152,7 @@ pumas
 
   .met-container {
     margin: 0;
+    padding-bottom: 20%;
   }
 
   .met-title {
@@ -1192,5 +1202,13 @@ pumas
 
   .form-row {
     flex-direction: column;
+  }
+
+  .contacto-container {
+    padding: 14% 5%;
+  }
+
+  .contacto-titulo {
+    padding: 0 5%;
   }
 }
