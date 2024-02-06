@@ -7,11 +7,14 @@ function Servicios({ language }) {
   const ref = React.useRef(null);
   const [activeClass, setActiveClass] = React.useState(false);
   const hiddenDelay = activeClass ? 'active' : 'hidden';
-  const maxCards = SERVICES_CARDS.length - 1;
+  const maxCards = SERVICES_CARDS[0].length - 1;
+  const cardsInfo = SERVICES_CARDS[language === 'ENGLISH' ? 0 : 1][card];
   const setId = language === 'ESPAÑOL' ? 'services' : 'servicios';
   const appearOptions = {
     rootMargin: '0px 0px -100px 0px',
   };
+  const title = language === 'ENGLISH' ? 'Servicios' : 'Services';
+  const subTitle = language === 'ENGLISH' ? 'Explora nuestros servicios' : 'Explore our services';
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,8 +39,8 @@ function Servicios({ language }) {
     <section className="services-container" id={setId}>
       <div className="services-wrapper">
         <div className="services-cards">
-          <p className="titulo-secciones">Servicios</p>
-          <p className="subtitulo-secciones">Explora nuestros servicios</p>
+          <p className="titulo-secciones">{title}</p>
+          <p className="subtitulo-secciones">{subTitle}</p>
         </div>
         <div className="card-position-absolute" ref={ref}>
           <div className="services-info-container">
@@ -47,8 +50,8 @@ function Servicios({ language }) {
               </div>
               <img
                 className={`services-img ${hiddenDelay}`}
-                src={SERVICES_CARDS[card].img}
-                alt={SERVICES_CARDS[card].title}
+                src={cardsInfo.img}
+                alt={cardsInfo.title}
               />
             </div>
             <div className="services-info-wrapper">
@@ -57,9 +60,9 @@ function Servicios({ language }) {
               </div>
               <div className="services-bullets-wrapper">
                 <div className={`${hiddenDelay} services-info`}>
-                  <p className="titulo-texto">{SERVICES_CARDS[card].title}</p>
+                  <p className="titulo-texto">{cardsInfo.title}</p>
                   <ul className={card === 0 ? 'lower-alpha' : 'bullet-points'}>
-                    {SERVICES_CARDS[card].info.split('?').map((bullets) => (
+                    {cardsInfo.info.split('?').map((bullets) => (
                       <li key={Math.random()} className="texto-general">{bullets}</li>
                     ))}
                   </ul>

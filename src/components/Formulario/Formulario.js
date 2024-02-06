@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
-function Formulario({ contacto }) {
+function Formulario({ contacto, language }) {
   const [firstName, setFirstName] = React.useState('');
   const [lastName, setLastName] = React.useState('');
   const [mobilNumber, setMobileNumber] = React.useState('');
@@ -9,7 +9,11 @@ function Formulario({ contacto }) {
   const [textArea, setTextArea] = React.useState('');
   const [state, handleSubmit] = useForm(contacto === 'Candidatos' ? 'xvoepwwk' : 'xvoepwyg');
   const ref = React.useRef(null);
-
+  const messageLabelSpanish = contacto === 'Candidatos' ? 'Áreas de Experiencia' : 'Mensaje';
+  const messageLabelEnglish = contacto === 'Candidatos' ? 'Experience Area' : 'Message';
+  const requerido = language === 'ENGLISH' ? 'Requerido' : 'Required';
+  const titleSpanish = contacto === 'Candidatos' ? 'Candidatos' : 'Clientes';
+  const titleEnglish = contacto === 'Candidatos' ? 'Candidates' : 'Clients';
   React.useEffect(() => {
     if (state.succeeded) {
       ref.current.classList.add('slide-in');
@@ -34,13 +38,17 @@ function Formulario({ contacto }) {
       className="form-container"
       onSubmit={handleSubmit}
     >
-      <p className="titulo-form">{contacto === 'Candidatos' ? 'Candidatos' : 'Clientes'}</p>
+      <p className="titulo-form">{language === 'ENGLISH' ? titleSpanish : titleEnglish}</p>
       <div className="form-row">
         <div className="form-column">
           <label htmlFor="first-name" className="titulo-texto">
-            Nombre(s)
+            {language === 'ENGLISH' ? 'Nombre(s)' : 'Name'}
             {' '}
-            <span>(requerido)</span>
+            <span>
+              (
+              {requerido}
+              )
+            </span>
           </label>
           <input
             id="first-name"
@@ -59,9 +67,13 @@ function Formulario({ contacto }) {
         </div>
         <div className="form-column">
           <label htmlFor="last-name" className="titulo-texto">
-            Apellidos
+            {language === 'ENGLISH' ? 'Apellidos' : 'Last name'}
             {' '}
-            <span>(requerido)</span>
+            <span>
+              (
+              {requerido}
+              )
+            </span>
           </label>
           <input
             id="last-name"
@@ -81,7 +93,7 @@ function Formulario({ contacto }) {
       </div>
       <div className="form-column">
         <label htmlFor="mobil-num" className="titulo-texto">{/* eslint-disable-line */}
-          Celular
+          {language === 'ENGLISH' ? 'Celular' : 'Mobile'}
         </label>
         <input
           id="mobil-num"
@@ -101,7 +113,11 @@ function Formulario({ contacto }) {
         <label htmlFor="email" className="titulo-texto">
           Email
           {' '}
-          <span>(requerido)</span>
+          <span>
+            (
+            {requerido}
+            )
+          </span>
         </label>
         <input
           id="email"
@@ -124,9 +140,13 @@ function Formulario({ contacto }) {
       </div>
       <div className="form-column">
         <label htmlFor="expertice" className="titulo-texto">
-          {contacto === 'Candidatos' ? 'Áreas de Experiencia' : 'Mensaje'}
+          {language === 'ENGLISH' ? messageLabelSpanish : messageLabelEnglish}
           {' '}
-          <span>(requerido)</span>
+          <span>
+            (
+            {requerido}
+            )
+          </span>
         </label>
         <textarea
           id="expertice"
@@ -152,9 +172,9 @@ function Formulario({ contacto }) {
           className="secondary-button"
           disabled={state.submitting}
         >
-          Enviar
+          {language === 'ENGLISH' ? 'Enviar' : 'Send'}
         </button>
-        <p className="form-submition" ref={ref}>Envío exitoso</p>
+        <p className="form-submition" ref={ref}>{language === 'ENGLISH' ? 'Envío Exitoso' : 'Successfull'}</p>
       </div>
     </form>
   );

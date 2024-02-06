@@ -1,7 +1,7 @@
 import React from 'react';
 import { FOOTER } from '../../data';
 
-function Footer() {
+function Footer({ language }) {
   const {
     logo,
     fbLogo,
@@ -11,14 +11,14 @@ function Footer() {
     telefono,
     fbURL,
     inURL,
-  } = FOOTER[0];
+  } = FOOTER[language === 'ENGLISH' ? 0 : 1];
 
   return (
     <div className="footer-container">
       <div className="footer-data">
         <img src={logo} alt="Abril Barrientos" />
         <p className="texto-footer">
-          Horarios:
+          {language === 'ENGLISH' ? 'Horarios:' : 'Working Hours:'}
           <br />
           {horario}
         </p>

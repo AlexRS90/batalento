@@ -8,7 +8,7 @@ function Home({ language }) {
   const [activeClass, setActiveClass] = React.useState(false);
   const ref = React.useRef(null);
   const maxCards = OFFICE_CARDS.length - 1;
-  const currentCard = OFFICE_CARDS[card];
+  const currentCard = OFFICE_CARDS[language === 'ENGLISH' ? 0 : 1][card];
   const description = language === 'ENGLISH' ? HOME[0] : HOME[1];
   const appearOptions = {
     rootMargin: '0px 0px -100px 0px',

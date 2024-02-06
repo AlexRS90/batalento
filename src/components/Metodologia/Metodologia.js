@@ -10,8 +10,8 @@ function Metodologia({ language }) {
     subtitle,
     cards,
     cierre,
-  } = METODOLOGIA[0];
-  const setId = language === 'ESPAÑOL' ? 'metodology' : 'metodologia';
+  } = METODOLOGIA[language === 'ENGLISH' ? 0 : 1][0];
+  const setId = language === 'ESPAÑOL' ? 'methodology' : 'metodologia';
   const appearOptions = {
     rootMargin: '0px 0px -100px 0px',
   };

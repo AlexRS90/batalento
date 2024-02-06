@@ -3,15 +3,17 @@ import Formulario from '../Formulario/Formulario';
 
 function Contacto({ language }) {
   const setId = language === 'ESPAÑOL' ? 'contact' : 'contacto';
+  const title = language === 'ESPAÑOL' ? 'Contact' : 'Contacto';
+  const subTitle = language === 'ESPAÑOL' ? "If you are looking for new professional challenges or talent, write us and we'll be in touch soon." : 'Escríbenos y nos pondremos en contacto a la brevedad.';
   return (
     <section className="contacto-container" id={setId}>
       <div className="contacto-titulo">
-        <p className="titulo-secciones">Contacto</p>
-        <p className="subtitulo-secciones">Escríbenos y nos pondremos en contacto a la brevedad.</p>
+        <p className="titulo-secciones">{title}</p>
+        <p className="subtitulo-secciones">{subTitle}</p>
       </div>
       <div className="forms-wrapper">
-        <Formulario contacto="Candidatos" />
-        <Formulario contacto="Clientes" />
+        <Formulario language={language} contacto="Candidatos" />
+        <Formulario language={language} contacto="Clientes" />
       </div>
       <a
         href="https://www.linkedin.com/company/abril-barrientos-talent-expert/jobs/?viewAsMember=true"
@@ -19,7 +21,7 @@ function Contacto({ language }) {
         rel="noreferrer"
         className="primary-button"
       >
-        VER VACANTES
+        {language === 'ENGLISH' ? 'VER VACANTES' : 'OPEN POSITIONS'}
       </a>
     </section>
   );

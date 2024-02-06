@@ -14,7 +14,7 @@ function Equipo({ language }) {
     position,
     resume,
     img,
-  } = EQUIPO[0];
+  } = EQUIPO[language === 'ENGLISH' ? 0 : 1][0];
   const {
     text1,
     text2,
