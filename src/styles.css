@@ -124,6 +124,7 @@ body {
 }
 
 .language {
+  display: block;
   width: auto;
   height: fit-content; /* stylelint-disable-line */
   font-family: 'Abel', sans-serif;
@@ -132,6 +133,10 @@ body {
   background-color: transparent;
   color: var(--general-text-color);
   cursor: pointer;
+}
+
+.flags {
+  display: none;
 }
 
 .home-wrapper {
@@ -195,7 +200,7 @@ body {
 .arrow-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .arrows-margin-home {
@@ -208,8 +213,8 @@ body {
 }
 
 .arrow-buttons > button {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: none;
   padding: 0;
@@ -294,7 +299,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  width: 45%;
+  width: 55%;
   max-width: 50em;
 }
 
@@ -824,6 +829,7 @@ pumas
 
   .services-info-wrapper ul {
     padding-right: 5%;
+    padding-left: 5%;
   }
 
   .equipo-containter {
@@ -920,10 +926,30 @@ pumas
   .menu-language {
     flex-direction: row-reverse;
     gap: 10%;
+    margin-top: 3px;
   }
 
   .language {
-    align-self: flex-end;
+    display: none;
+  }
+
+  .flags {
+    display: block;
+    width: 40px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .us-flag {
+    background-image: url("../src/assets/images/us-flag.png");
+  }
+
+  .mexico-flag {
+    background-image: url("../src/assets/images/mexico-flag.png");
   }
 
   .nav-links {
@@ -934,20 +960,34 @@ pumas
     background-color: var(--square2-color);
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
     z-index: 1;
   }
 
   .show-menu {
     flex-direction: column;
-    margin-top: 50%;
-    margin-bottom: 50%;
-    padding-left: 1rem;
+    margin-top: 25%;
     gap: 0.5rem;
     position: absolute;
   }
 
+  .mountains {
+    background: url("../src/assets/images/Home-vert.png") no-repeat center center;
+    background-size: cover;
+  }
+
+  .mountains p {
+    width: 80%;
+    text-align: justify;
+  }
+
+  .mountains p:first-child {
+    margin-top: 16%;
+  }
+
   .office {
-    min-height: 115vh;
+    min-height: 150vh;
   }
 
   .card-text {
@@ -962,13 +1002,14 @@ pumas
     position: relative;
     width: 85%;
     height: fit-content;/* stylelint-disable-line */
-    max-height: 44em;
+    max-height: 60em;
   }
 
   .square-wrapper {
     flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 3rem;
   }
 
   .arrow-button {
@@ -985,11 +1026,16 @@ pumas
     justify-content: center;
     gap: 18em;
     background-size: cover;
-    height: 54rem;
+
+    /* height: 54rem;
+    propiedad con boton VER MAS */
+    height: 50rem;
   }
 
   .services-wrapper {
-    gap: 18em;
+    /* gap: 16em;
+    Propiedad con boton VER MAS */
+    gap: 10em;
     width: 80%;
   }
 
@@ -1014,13 +1060,23 @@ pumas
   .services-img-container {
     border-radius: 40px 40px 0 0;
     flex-direction: column;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .services-img-container img {
+    max-width: 55%;
+    max-height: 55%;
   }
 
   .services-info-wrapper {
     padding-left: 10%;
     flex-direction: column-reverse;
     width: auto;
-    padding-bottom: 6rem;
+
+    /* padding-bottom: 6rem;
+    Padding con voton ver mas activo */
+    padding-bottom: 3rem;
   }
 
   .services-bullets-wrapper {
@@ -1061,9 +1117,9 @@ pumas
   }
 
   .equipo-wrapper {
-    padding: 15% 10%;
+    padding: 25% 10%;
     height: fit-content;/* stylelint-disable-line */
-    max-height: 165vh;
+    max-height: 175vh;
   }
 
   .equipo-containter {
@@ -1078,7 +1134,11 @@ pumas
     max-width: unset;
     border-radius: 40px;
     background-color: white;
-    padding: 20% 10%;
+    padding: 20% 15%;
+  }
+
+  .appear-team-title p:first-child {
+    margin-bottom: 2rem;
   }
 
   .team-member {
@@ -1095,10 +1155,13 @@ pumas
 
   .met-container {
     margin: 0;
+    padding-top: 10%;
+    padding-bottom: 20%;
   }
 
   .met-title {
-    margin: 10% 0 10% 15%;
+    margin: 10% 0 10% 10%;
+    padding-left: 0;
   }
 
   .met-cards {
@@ -1108,6 +1171,7 @@ pumas
     gap: 0;
     padding: 0;
     width: 100%;
+    margin-bottom: 0;
   }
 
   .met-card-wrapper {
@@ -1128,12 +1192,12 @@ pumas
 
   .met-card-wrapper:last-child {
     height: 12em;
-    border-radius: 0 0 40px 40px;
   }
 
   .met-cierre {
-    padding: 20%;
+    padding: 10%;
     background-color: white;
+    border-radius: 0 0 40px 40px;
   }
 
   .form-container {
@@ -1142,5 +1206,13 @@ pumas
 
   .form-row {
     flex-direction: column;
+  }
+
+  .contacto-container {
+    padding: 14% 5%;
+  }
+
+  .contacto-titulo {
+    padding: 0 5%;
   }
 }

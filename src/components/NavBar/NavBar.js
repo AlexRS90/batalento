@@ -9,6 +9,7 @@ function NavBar({
   setMenuSection,
   language,
 }) {
+  const flag = language === 'ESPAÑOL' ? 'mexico-flag' : 'us-flag';
   return (
     <nav className="navbar" id="navbar">
       <div>
@@ -30,6 +31,13 @@ function NavBar({
           />
         </div>
         <button type="button" className="language" onClick={() => toggleLanguage()}>{language}</button>
+        <button
+          type="button"
+          aria-label="Toggle Language"
+          onClick={() => toggleLanguage()}
+          onKeyDown={() => toggleLanguage()}
+          className={`flags ${flag}`}
+        />
       </div>
     </nav>
   );
