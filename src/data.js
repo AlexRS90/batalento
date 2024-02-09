@@ -40,7 +40,7 @@ const OFFICE_CARDS = [
   [
     {
       id: 1,
-      title: 'Our values?As business partners of our clients and candidates we work attached to our values:',
+      title: 'Our Values?As business partners of our clients and candidates we work attached to our values:',
       text_info: 'HONESTY¿ Transparency, sincerity and frankness as a form of communication and work, thus generating trust and credibility.? DYNAMISM¿ Flexibility and ease of adaptation to a changing environment, always keeping ourselves open to learning and transforming ourselves according to new market trends.? CUSTOMER ORIENTED¿Its our priority to actively listen to the needs of our clients in order to provide solutions that truly generate value, always being accessible and in constant communication.',
     },
     {
